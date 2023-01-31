@@ -1,4 +1,4 @@
-## JSX Validation
+## JSX Validations
 - You should have only one parent element. 
 - If you not wrapped inside the parent then it should start complaining.
 -  Supports only one root.
