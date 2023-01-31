@@ -23,6 +23,8 @@
   - Need virtual DOM for **Reconciliation** in React.
   - React uses this algorithm to diff one tree from other and it determines what to change in the UI and what does not change.
   - Diff algo find out what needs to be updated and just update that small part of the UI without re-rendering the whole app.
+  ![image](https://user-images.githubusercontent.com/42863919/215876981-03620e92-6bb9-400d-b002-09a1f916eaec.png)
+
 
 # Questions
 1. Ques. Can we use my React.Fragment inside the React.Fragment ?
