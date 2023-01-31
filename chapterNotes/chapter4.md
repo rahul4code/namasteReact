@@ -36,3 +36,5 @@
 4. Optional Chaining ?
 5. Read more about diff algo ?
 6. React Fiber Architecture ? after React16 the reconciliation engine(for diff) gets updated with some changes. 
+7. Is index a valid key if yes why we shouldn't use it ?
+     - no key <<< index << unique key (best practice)
