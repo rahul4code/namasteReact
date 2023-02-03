@@ -54,5 +54,3 @@ React.createElement is a decription of what the actual DOM element should look l
 - Once execution completes the Parsing continues.
 - Async attribute scripts are full-independent.
 - It doesn't wait for execution wahetever scripts load first will get executed in case of multiple.
-  
-
