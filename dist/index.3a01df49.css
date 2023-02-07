@@ -1,0 +1,48 @@
+.header {
+  height: 100px;
+  justify-content: space-between;
+  display: flex;
+}
+
+.header > img {
+  padding-left: 3rem;
+}
+
+.list {
+  display: flex;
+}
+
+.list > li {
+  cursor: pointer;
+  margin-right: 5rem;
+  font-family: Franklin Gothic Medium, Arial Narrow, Arial, sans-serif;
+  line-height: 4em;
+  list-style: none;
+}
+
+.list > li:hover {
+  color: brown;
+}
+
+.resList {
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding-top: 1rem;
+  display: flex;
+}
+
+.card {
+  width: 300px;
+  border: 3px solid #deb887;
+  border-radius: 7px;
+  margin-bottom: 2rem;
+}
+
+h2 {
+  text-align: center;
+  font-family: Franklin Gothic Medium, Arial Narrow, Arial, sans-serif;
+  font-size: medium;
+  font-weight: 100;
+}
+
+/*# sourceMappingURL=index.3a01df49.css.map */
