@@ -30,37 +30,39 @@
   -  The algo doesn't know the order of the sibbling elements/node in the tree if the key is missing it will re-render the whole parent node whenever any new sibbling/element is added.
 
 # QnA
-1. Ques. Can we use my React.Fragment inside the React.Fragment ?
+## Can we use my React.Fragment inside the React.Fragment ?
    
    Yes, we can use React.Fragment inside React.Fragment it can also be used as empty angular brackets <></>
    
-2. Array.join ? 
+## Array.join ? 
 
    Array.join returns a string without changing original array and also it can be use to add extra string b/w the elements like `alpha.join(" and ")=> a and b and c`
 
-3. Config-Driven UI ?
+## Config-Driven UI ?
 
-    Config-Driven UI is an approach of rendering UI on the basis of config data that can be any object or arr of object   
+   Config-Driven UI is an approach of rendering UI on the basis of config data that can be any object or arr of object   
 
-4. Optional Chaining ?
+## Optional Chaining ?
 
-      Optional chaining (?.) operator accesses an object's property or calls a function. If the object accessed or function called using this operator is undefined or null, the expression short circuits and evaluates to undefined instead of throwing an error.
+   Optional chaining (?.) operator accesses an object's property or calls a function. If the object accessed or function called using this operator is undefined or null, the expression short circuits and evaluates to undefined instead of throwing an error.
 
-5. Read more about diff algo ?
+## Read more about diff algo ?
 
-      A diff algorithm outputs the set of differences between two inputs/DOM.
+   A diff algorithm outputs the set of differences between two inputs/DOM.
 
-6. React Fiber Architecture ? after React16 the reconciliation engine(for diff) gets updated with some changes. 
+## React Fiber Architecture ? after React16 the reconciliation engine(for diff) gets updated with some changes. 
 
-    - It's a plain object with some properties which focuses on animations and responsiveness. Fiber represents work and has the ability to split work into chunks(time-slicing) and prioritize tasks. We can pause work and come back to it later. We can also reuse previously completed work or maybe abort it if it is not needed. As opposed to the old React reconciler, it is asynchronous. Where the old reconciler i.e Stack reconciler is synchronous`
+   - It's a plain object with some properties which focuses on animations and responsiveness. Fiber represents work and has the ability to split work into chunks(time-slicing) and prioritize tasks. We can pause work and come back to it later. We can also reuse previously completed work or maybe abort it if it is not needed. As opposed to the old React reconciler, it is asynchronous. Where the old reconciler i.e Stack reconciler is synchronous`
 
-    - React first processes those fibers, those units of work and we end with something called finishwork(). Afterward, it commits this work resulting in visible changes in the DOM. This all happens in two phases. The first is the render phase(asynchronous) and it is during this phase that the processing happens. The second phase is the commit phase i.e always synchronous and cannot be interrupted.
+   - React first processes those fibers, those units of work and we end with something called finishwork(). Afterward, it commits this work resulting in visible changes in the DOM. This all happens in two phases. The first is the render phase(asynchronous) and it is during this phase that the processing happens. The second phase is the commit phase i.e always synchronous and cannot be interrupted.
 
-    - If some work has a very high priority like animation; React can schedule it in such a way that it gets handled as soon as possible, but if some work has low priority, for example, a network request React can simply delay it for as long as it needs. It uses a function requestAnimationFrame() - highP and requestIdleCallback() -LowP to do that.
+   - If some work has a very high priority like animation; React can schedule it in such a way that it gets handled as soon as possible, but if some work has low priority, for example, a network request React can simply delay it for as long as it needs. It uses a function requestAnimationFrame() - highP and requestIdleCallback() -LowP to do that.
    
-    For more visit https://www.geeksforgeeks.org/what-is-react-fiber/
+   For more visit 
+              
+          https://www.geeksforgeeks.org/what-is-react-fiber/
 
-7. Is index a valid key if yes why we shouldn't use it ?
-     - no key <<< index << unique key (best practice)
+## Is index a valid key if yes why we shouldn't use it ?
+   - no key <<< index << unique key (best practice)
 
    Yes index can be a valid key but not recommended to use indexes for keys in case if the order of items may change or like adding or removing items from the list can be a good example why not to use index. This can negatively impact performance and may cause issues with component state
