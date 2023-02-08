@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import {RestaurantList} from "./restaurant.js";
+import { RestaurantList } from "./restaurant.js";
 
 // const title=<span>My bio</span>
 // const TitleAsFunc=()=>{
@@ -10,7 +10,11 @@ import {RestaurantList} from "./restaurant.js";
 const Header = () => {
   return (
     <div className="header">
-      <img alt="NoImg" className="logo" src="https://img.freepik.com/premium-vector/food-festival-logo-design-template_96807-1188.jpg"/>
+      <img
+        alt="NoImg"
+        className="logo"
+        src="https://img.freepik.com/premium-vector/food-festival-logo-design-template_96807-1188.jpg"
+      />
       <ul className="list">
         <li>Home</li>
         <li>About Us</li>
@@ -21,7 +25,7 @@ const Header = () => {
   );
 };
 
-const RestaurantCard=(props)=>{
+const RestaurantCard = (props) => {
   return (
     <div className="card">
       <img
@@ -37,37 +41,38 @@ const RestaurantCard=(props)=>{
       <h2> {props.rating} </h2>
     </div>
   );
-}
+};
 
-const Body=()=>{
-  return(<div className="resList">
-    {RestaurantList.map(item=>{
-      return(
-        <RestaurantCard name={item.data.name} 
-          link={item.data.cloudinaryImageId}
-          price={item.data.costForTwoString}
-          rating={item.data.avgRating}/>
-      )
-    }
-    )}
-  </div>)
-}
+const Body = () => {
+  return (
+    <div className="resList">
+      {RestaurantList.map((item) => {
+        return (
+          <RestaurantCard
+            name={item.data.name}
+            link={item.data.cloudinaryImageId}
+            price={item.data.costForTwoString}
+            rating={item.data.avgRating}
+          />
+        );
+      })}
+    </div>
+  );
+};
 
-const Footer=()=>{
-  return (<h1>Footer</h1>)
-}
+const Footer = () => {
+  return <h1>Footer</h1>;
+};
 
-const Layout=()=>{
-  return(
+const Layout = () => {
+  return (
     <>
-     <Header/>
+      <Header />
       <Body />
       <Footer />
     </>
-  )
-}
-
-
+  );
+};
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(<Layout />);
