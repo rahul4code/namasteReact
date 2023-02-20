@@ -5,7 +5,7 @@
 | Named Export | Default Export |
 |:-------------|:---------------|
 | 1. Named export are used to export multiple values. | 1. Default export are used to export single value from the file.|
-| 2. Name should be same when importing. | 2. Can use any name when when importing. |
+| 2. Name should be same when importing. | 2. Can use any name when importing. |
 
 # What is one-way data binding that React uses ?
 - Data binding is the process of connecting UI with the data which populates it.
