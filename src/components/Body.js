@@ -1,6 +1,6 @@
 import { RestaurantList } from "../constants";
 import RestaurantCard from "./RestaurantCard";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 function filterData(searchText, restaurants){
   console.log(searchText, restaurants)
@@ -14,7 +14,17 @@ const Body = () => {
   const [searchText, setSearchText] = useState("");
   const [restaurants, setRestaurants]=useState(RestaurantList);
 
-  console.log("render")
+  useEffect(()=>{
+    getData()
+  },[])
+
+  async function getData()
+  {
+    const data=await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=26.8466937&lng=80.94616599999999&page_type=DESKTOP_WEB_LISTING")
+    const parsedData=await data.json()
+    console.log(parsedData);
+    setRestaurants(parsedData?.data?.cards[2]?.data?.data?.cards)
+  }
 
   return (
     <>

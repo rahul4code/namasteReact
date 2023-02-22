@@ -28206,7 +28206,15 @@ const Body = ()=>{
     _s();
     const [searchText, setSearchText] = (0, _react.useState)("");
     const [restaurants, setRestaurants] = (0, _react.useState)((0, _constants.RestaurantList));
-    console.log("render");
+    (0, _react.useEffect)(()=>{
+        getData();
+    }, []);
+    async function getData() {
+        const data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=26.8466937&lng=80.94616599999999&page_type=DESKTOP_WEB_LISTING");
+        const parsedData = await data.json();
+        console.log(parsedData);
+        setRestaurants(parsedData?.data?.cards[2]?.data?.data?.cards);
+    }
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -28219,12 +28227,12 @@ const Body = ()=>{
                     className: "search-input"
                 }, void 0, false, {
                     fileName: "src/components/Body.js",
-                    lineNumber: 15,
+                    lineNumber: 23,
                     columnNumber: 9
                 }, undefined)
             }, void 0, false, {
                 fileName: "src/components/Body.js",
-                lineNumber: 14,
+                lineNumber: 22,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
@@ -28237,7 +28245,7 @@ const Body = ()=>{
                 children: "Button"
             }, void 0, false, {
                 fileName: "src/components/Body.js",
-                lineNumber: 17,
+                lineNumber: 25,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -28250,19 +28258,19 @@ const Body = ()=>{
                         rating: item.data.avgRating
                     }, void 0, false, {
                         fileName: "src/components/Body.js",
-                        lineNumber: 25,
+                        lineNumber: 33,
                         columnNumber: 16
                     }, undefined);
                 })
             }, void 0, false, {
                 fileName: "src/components/Body.js",
-                lineNumber: 23,
+                lineNumber: 31,
                 columnNumber: 7
             }, undefined)
         ]
     }, void 0, true);
 };
-_s(Body, "FBvqnGARVHwE1miCVhwu9u4uglk=");
+_s(Body, "sik0gaN2mtY/rxn5DV4Qc+SCWaU=");
 _c = Body;
 exports.default = Body;
 var _c;
