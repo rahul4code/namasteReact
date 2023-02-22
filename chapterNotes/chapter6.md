@@ -38,6 +38,9 @@
   
 - In the same way if it is dependent on any state then it will get call at **once after initial render + everytime when the state value get changes**.
 
+- Different ways of calling API (IInd is the preferred way)
+![Screenshot_20230220_172233](https://user-images.githubusercontent.com/42863919/220661726-1eff2127-8477-46ec-8cca-79b4ca6acbc3.png)
+
 ### JSON.parse vs somthing.json() ? 
 - **JSON.parse()** When receiving data from a web server, the data is always a string.
 Parse the data with JSON.parse(), and the data becomes a JavaScript object.
