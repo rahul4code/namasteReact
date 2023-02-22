@@ -10,8 +10,8 @@ const RestaurantCard = (props) => {
           width="300px"
         />
         <h2> {props.name} </h2>
-        <h2> {props.price} </h2>
-        <h2> {props.rating} </h2>
+        <h2 style={{color:"darkgreen"}}> {props.price} </h2>
+        <h2 style={{color:"green"}}> {props.rating} </h2>
       </div>
     );
   };

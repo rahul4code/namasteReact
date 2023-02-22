@@ -1,45 +1,50 @@
-import { RestaurantList } from "../constants";
 import RestaurantCard from "./RestaurantCard";
-import { useState } from "react";
-
-function filterData(searchText, restaurants){
-  console.log(searchText, restaurants)
-  const filteredRestlist=restaurants.filter((restaurant)=>
-    restaurant.data.name.includes(searchText)
-  )
-  return filteredRestlist;
-}
+import { useState, useEffect } from "react";
+import Shimmer from "../Shimmer";
 
 const Body = () => {
   const [searchText, setSearchText] = useState("");
-  const [restaurants, setRestaurants]=useState(RestaurantList);
+  const [restaurants, setRestaurants]=useState([]);
+  const [filteredRestaurant, setFilteredRestaurant]=useState([]);
 
-  console.log("render")
+  useEffect(()=>{
+    getData()
+  },[])
 
-  return (
-    <>
-      <div className="search-container">
-        <input
-          type="text"
-          placeholder="Search"
-          onChange={(e) => setSearchText(e.target.value)}
-          value={searchText}
-          className="search-input"
-        />
-      </div>
-      <button
-        type="text"
-        onClick={()=>{
-            const data=filterData(searchText, restaurants);
-            setRestaurants(data)
-          } 
-        }
-        className="search-input"
-      >
-        Button
-      </button>
+  useEffect(()=>{
+    if(searchText?.length>2)
+    {
+      filterData()
+    }
+    else if(searchText?.length===0)
+    {
+      setFilteredRestaurant(restaurants)
+    }
+  },[searchText])
+
+  async function getData()
+  {
+    const data=await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=26.8466937&lng=80.94616599999999&page_type=DESKTOP_WEB_LISTING")
+    const parsedData=await data.json()
+    console.log(parsedData);
+    setTimeout(()=>{
+      setFilteredRestaurant(parsedData?.data?.cards[2]?.data?.data?.cards)
+    },3000)
+    setRestaurants(parsedData?.data?.cards[2]?.data?.data?.cards)
+
+  }
+
+  function filterData(){
+    const filteredRestlist=filteredRestaurant.filter((restaurant)=>
+      restaurant?.data?.name?.toLowerCase().includes(searchText?.toLowerCase())
+    )
+    setFilteredRestaurant(filteredRestlist);
+  }
+
+  const renderRestaurantCard=()=>{
+    return(
       <div className="resList">
-        {restaurants.map((item) => {
+        {filteredRestaurant.map((item) => {
           return (
             <RestaurantCard
               name={item.data.name}
@@ -50,6 +55,25 @@ const Body = () => {
           );
         })}
       </div>
+    )
+  }
+
+  return (
+    <>
+      <div className="bodyCard">
+        <div className="searchContainer">
+        <input
+          type="text"
+          placeholder="Search for restaurant and food"
+          onChange={(e) => setSearchText(e.target.value)}
+          value={searchText}
+          className="search-input"
+        />
+        </div>
+      </div>
+      {
+      filteredRestaurant?.length >0 ? renderRestaurantCard() : <Shimmer />
+      }
     </>
   );
 };
