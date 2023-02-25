@@ -21,6 +21,10 @@
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
+.list > li > a{
+  text-decoration: none;
+}
+
 .list > li:hover {
   color: seagreen;
 }
