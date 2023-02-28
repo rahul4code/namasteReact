@@ -21,6 +21,10 @@
   list-style: none;
 }
 
+.list > li > a {
+  text-decoration: none;
+}
+
 .list > li:hover {
   color: #2e8b57;
 }
