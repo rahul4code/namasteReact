@@ -100,3 +100,7 @@ Note: `You can't create a class base component without render method`
 
 ## Write diff between Mount Update and Unmount
 
+# useCase of componentDidUpdate
+
+# useCase of componentWillUnmount and with useEffect
+
