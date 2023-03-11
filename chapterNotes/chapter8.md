@@ -29,6 +29,8 @@ Note: `You can't create a class base component without render method`
 `Don't do this: this.state.count = 1`
 
 # **React LifeCycle notes**
+![image](https://user-images.githubusercontent.com/42863919/224479759-0fba79ba-de5f-4947-9538-4de4a71d6103.png)
+
 - In RLC, firstly the contructor get called and then render.
 - **ComponentDidMount()** : This is the function that being called after my initial render.
   - constructor => render() method => componentDidMount
@@ -100,7 +102,13 @@ Note: `You can't create a class base component without render method`
 
 ## Write diff between Mount Update and Unmount
 
-# useCase of componentDidUpdate
+# example useCase of componentDidUpdate and with useEffect
+![Screenshot 2023-03-11 153737](https://user-images.githubusercontent.com/42863919/224479670-0f9a0e9a-3854-4982-9b23-67858ee805b7.png)
 
-# useCase of componentWillUnmount and with useEffect
+
+# example useCase of componentWillUnmount and with useEffect
+![Screenshot 2023-03-11 155302](https://user-images.githubusercontent.com/42863919/224479657-30a6ecf7-6046-46fd-bd83-d2e89abe5376.png)
+![Screenshot 2023-03-11 160045](https://user-images.githubusercontent.com/42863919/224479648-e6710dee-669c-478d-bd40-60f8667cd59d.png)
+
+
 
