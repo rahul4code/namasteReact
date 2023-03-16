@@ -73,7 +73,7 @@ However, you can still use async/await inside the function passed to useEffect.
         2. Parent Render
         3. Child Constructor
         4. Child Render
-        5. Childer ComponentDidMount
+        5. Child ComponentDidMount
         6. Parent ComponentDidMount
 
         Quick Game 2: Sequence of console.log()  in two childs 
@@ -134,7 +134,7 @@ However, you can still use async/await inside the function passed to useEffect.
 `# Disclaimer: useEffect != componentDidMount (never ever compare)`
 
 ## Write diff between Mount Update and Unmount
-
+- Refer the RLC image 
 ## example useCase of componentDidUpdate and with useEffect
 ![Screenshot 2023-03-11 153737](https://user-images.githubusercontent.com/42863919/224479670-0f9a0e9a-3854-4982-9b23-67858ee805b7.png)
 
