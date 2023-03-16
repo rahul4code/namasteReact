@@ -2946,22 +2946,24 @@ var _reactRouterDom = require("react-router-dom");
 var _restaurantMenuJs = require("./components/RestaurantMenu.js");
 var _restaurantMenuJsDefault = parcelHelpers.interopDefault(_restaurantMenuJs);
 var _registration = require("./components/Registration/Registration");
+var _aboutWithClassJs = require("./components/AboutWithClass.js");
+var _aboutWithClassJsDefault = parcelHelpers.interopDefault(_aboutWithClassJs);
 const Layout = ()=>{
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _headerJsDefault.default), {}, void 0, false, {
                 fileName: "src/App.js",
-                lineNumber: 14,
+                lineNumber: 15,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Outlet), {}, void 0, false, {
                 fileName: "src/App.js",
-                lineNumber: 15,
+                lineNumber: 16,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _footerDefault.default), {}, void 0, false, {
                 fileName: "src/App.js",
-                lineNumber: 16,
+                lineNumber: 17,
                 columnNumber: 7
             }, undefined)
         ]
@@ -2973,12 +2975,12 @@ const appRouter = (0, _reactRouterDom.createBrowserRouter)([
         path: "/",
         element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Layout, {}, void 0, false, {
             fileName: "src/App.js",
-            lineNumber: 21,
+            lineNumber: 22,
             columnNumber: 12
         }, undefined),
         errorElement: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _errorDefault.default), {}, void 0, false, {
             fileName: "src/App.js",
-            lineNumber: 22,
+            lineNumber: 23,
             columnNumber: 17
         }, undefined),
         children: [
@@ -2986,15 +2988,16 @@ const appRouter = (0, _reactRouterDom.createBrowserRouter)([
                 path: "/",
                 element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _bodyDefault.default), {}, void 0, false, {
                     fileName: "src/App.js",
-                    lineNumber: 25,
+                    lineNumber: 26,
                     columnNumber: 14
                 }, undefined)
             },
             {
                 path: "/about",
-                element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _aboutDefault.default), {}, void 0, false, {
+                // element:<About />
+                element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _aboutWithClassJsDefault.default), {}, void 0, false, {
                     fileName: "src/App.js",
-                    lineNumber: 28,
+                    lineNumber: 30,
                     columnNumber: 14
                 }, undefined)
             },
@@ -3002,7 +3005,7 @@ const appRouter = (0, _reactRouterDom.createBrowserRouter)([
                 path: "/contact",
                 element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _contactDefault.default), {}, void 0, false, {
                     fileName: "src/App.js",
-                    lineNumber: 31,
+                    lineNumber: 33,
                     columnNumber: 14
                 }, undefined)
             },
@@ -3010,7 +3013,7 @@ const appRouter = (0, _reactRouterDom.createBrowserRouter)([
                 path: "/restaurantMenu/:id",
                 element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _restaurantMenuJsDefault.default), {}, void 0, false, {
                     fileName: "src/App.js",
-                    lineNumber: 34,
+                    lineNumber: 36,
                     columnNumber: 14
                 }, undefined)
             },
@@ -3018,7 +3021,7 @@ const appRouter = (0, _reactRouterDom.createBrowserRouter)([
                 path: "/registration",
                 element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _registration.Registration), {}, void 0, false, {
                     fileName: "src/App.js",
-                    lineNumber: 37,
+                    lineNumber: 39,
                     columnNumber: 14
                 }, undefined)
             }
@@ -3030,7 +3033,7 @@ root.render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.RouterP
     router: appRouter
 }, void 0, false, {
     fileName: "src/App.js",
-    lineNumber: 41,
+    lineNumber: 43,
     columnNumber: 13
 }, undefined));
 var _c;
@@ -3041,7 +3044,7 @@ $RefreshReg$(_c, "Layout");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-dom/client":"lOjBx","./components/Header.js":"hsJbF","./components/Footer":"8pPOA","./components/Body":"8yaV8","./components/About":"9R1Eu","./components/Error":"kvula","./components/Contact":"cgAOG","react-router-dom":"9xmpe","./components/RestaurantMenu.js":"8PuJ6","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./components/Registration/Registration":"29es4"}],"iTorj":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-dom/client":"lOjBx","./components/Header.js":"hsJbF","./components/Footer":"8pPOA","./components/Body":"8yaV8","./components/About":"9R1Eu","./components/Error":"kvula","./components/Contact":"cgAOG","react-router-dom":"9xmpe","./components/RestaurantMenu.js":"8PuJ6","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./components/Registration/Registration":"29es4","./components/AboutWithClass.js":"65MTV"}],"iTorj":[function(require,module,exports) {
 "use strict";
 module.exports = require("e2dff8a4de197b5d");
 
@@ -33770,26 +33773,70 @@ try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
-const Contact = ()=>{
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-        children: "Hi This is me Contact :p"
-    }, void 0, false, {
-        fileName: "src/components/Contact.js",
-        lineNumber: 2,
-        columnNumber: 10
-    }, undefined);
-};
-_c = Contact;
-exports.default = Contact;
-var _c;
-$RefreshReg$(_c, "Contact");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+class Contact extends (0, _react.Component) {
+    constructor(props){
+        super(props);
+        console.log("Child constructor");
+    }
+    componentDidMount() {
+        console.log("Child compoenentDidMount");
+        this.props.getNumber();
+    }
+    componentDidUpdate() {
+        console.log("Child componenetDidUpdate");
+    }
+    componentWillUnmount() {
+        console.log("child componentWillUnmount");
+    }
+    render() {
+        console.log("Child render");
+        return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
+            children: [
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
+                    children: [
+                        "Contact ",
+                        this.props.number
+                    ]
+                }, void 0, true, {
+                    fileName: "src/components/Contact.js",
+                    lineNumber: 20,
+                    columnNumber: 9
+                }, this),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                    onClick: ()=>this.props.getNumber(),
+                    children: "Test"
+                }, void 0, false, {
+                    fileName: "src/components/Contact.js",
+                    lineNumber: 21,
+                    columnNumber: 10
+                }, this)
+            ]
+        }, void 0, true);
+    }
+}
+exports.default = Contact; // const Contact=(props)=>{
+ //     const {number='NaN'}=props;
+ //     useEffect(()=>{
+ //         console.log("This is useEffect with empty array")
+ //     },[number])
+ //     useEffect(()=>{
+ //         return()=>{
+ //             console.log("This is useEffect with return")
+ //         }
+ //     })
+ //     console.log("From render")
+ //     return(<h1>Contact {number}</h1>)
+ // }
+ // export default Contact;
 
   $parcel$ReactRefreshHelpers$ee46.postlude(module);
 } finally {
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"8PuJ6":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"8PuJ6":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$40d6 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -41188,6 +41235,78 @@ function makeNodesHash(arr) {
     return res;
 }
 
-},{}]},["1xC6H","cJcMZ","2kQhy"], "2kQhy", "parcelRequire2a19")
+},{}],"65MTV":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$3d7a = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$3d7a.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _contact = require("./Contact");
+var _contactDefault = parcelHelpers.interopDefault(_contact);
+class AboutWithClass extends (0, _react.Component) {
+    constructor(props){
+        super(props);
+        this.state = {
+            name: "Rahul",
+            number: "8080808080"
+        };
+        this.getNumber = this.getNumber.bind(this);
+        console.log("Parent constructor");
+    }
+    getNumber() {
+        this.setState({
+            number: "123456789"
+        });
+    }
+    componentDidMount() {
+        console.log("Parent did mount");
+    }
+    componentDidUpdate() {
+        console.log("Parent did updated");
+    }
+    componentWillUnmount() {
+        console.log("Parent unmount");
+    }
+    render() {
+        console.log("Parent render");
+        return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
+            children: [
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                    children: [
+                        "This is me ",
+                        this.state.name,
+                        "!! and this is my"
+                    ]
+                }, void 0, true, {
+                    fileName: "src/components/AboutWithClass.js",
+                    lineNumber: 29,
+                    columnNumber: 14
+                }, this),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _contactDefault.default), {
+                    getNumber: this.getNumber,
+                    number: this.state.number
+                }, void 0, false, {
+                    fileName: "src/components/AboutWithClass.js",
+                    lineNumber: 29,
+                    columnNumber: 68
+                }, this)
+            ]
+        }, void 0, true);
+    }
+}
+exports.default = AboutWithClass;
+
+  $parcel$ReactRefreshHelpers$3d7a.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","./Contact":"cgAOG","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}]},["1xC6H","cJcMZ","2kQhy"], "2kQhy", "parcelRequire2a19")
 
 //# sourceMappingURL=index.7271efb6.js.map
