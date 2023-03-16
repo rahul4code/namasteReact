@@ -17,7 +17,40 @@ Note: `You can't create a class base component without render method`
 - When you load a class contructor being called first.
 
 # Why to use super inside constructor ?
+
+In React class-based components, the super() keyword is used to call the constructor of the parent class. This is necessary because the React component class extends the React.Component class, which is a parent class that provides important functionality to the component.
+
+Here are some reasons why you might want to use super() inside the constructor of a React class-based component:
+
+- Props: When a React component is created, it receives props from its parent component. These props can be accessed in the component's constructor using the super() keyword. This allows you to initialize the component's state or perform other actions based on the initial props.
+
+- State: React components can have state, which represents data that can change over time. The super() keyword is used to initialize the component's state in the constructor. This is important because the state should be initialized before the component is rendered for the first time.
+
+- Lifecycle methods: React components have a number of lifecycle methods that are called at different stages of the component's lifecycle. The super() keyword is used to call these lifecycle methods in the parent class, which ensures that the component behaves correctly throughout its lifecycle.
+
+- Inheritance: If you extend a component from another component, you can use super() to call the constructor of the parent component. This is important because the parent component may have functionality that the child component needs to inherit.
+
+`In summary, using super() inside the constructor of a React class-based component is necessary to access props, initialize state, call lifecycle methods, and inherit functionality from parent components.`
+
 # Why I can make componentDidMount async but not useEffect ?
+### Here are the reasons:
+- `componentDidMount` is a class-based method while the useEffect hook is a function-based component equivalent that allows you to perform side effects (such as fetching data, setting up subscriptions, or manipulating the DOM) in a function component. 
+- `componentDidMount` is called once, immediately after the component is mounted, while `useEffect` can be called multiple times throughout the component's lifecycle.
+- `componentDidMount` can be made asynchronous because it is a method that can return a Promise. `useEffect` cannot be made asynchronous because it must return either nothing or a cleanup function.
+
+        useEffect(() => {
+        async function fetchData() {
+            const response = await fetch('https://api.example.com/data');
+            const data = await response.json();
+            setData(data);
+        }
+
+        fetchData();
+        }, []);
+
+However, you can still use async/await inside the function passed to useEffect.
+
+
 
 # setState in class component?
 - setState is use to update the state.
@@ -109,6 +142,3 @@ Note: `You can't create a class base component without render method`
 ## example useCase of componentWillUnmount and with useEffect
 ![Screenshot 2023-03-11 155302](https://user-images.githubusercontent.com/42863919/224479657-30a6ecf7-6046-46fd-bd83-d2e89abe5376.png)
 ![Screenshot 2023-03-11 160045](https://user-images.githubusercontent.com/42863919/224479648-e6710dee-669c-478d-bd40-60f8667cd59d.png)
-
-
-
