@@ -13,6 +13,8 @@
 `Can use useState and useEffect inside custom hooks but not in normal function.`
 
 ## How to add and remove Event Listners ?
+![Screenshot 2023-03-16 160953](https://user-images.githubusercontent.com/42863919/226176763-744542e2-3f8a-4d4d-aa03-b4c86832184d.png)
+
 
 ## What is **chunking** or code splitting/ dynamic bundling/ **lazy loading** and how to acheive it ?
 - Lazy Loading
