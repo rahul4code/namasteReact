@@ -1,4 +1,7 @@
 export const IMG_CDN_URL="https://img.freepik.com/premium-vector/food-festival-logo-design-template_96807-1188.jpg";
+
+export const RES_DETAIL_URL="https://www.swiggy.com/dapi/menu/v4/full?lat=26.8466937&lng=80.94616599999999&menuId=";
+
 export const RestaurantList = [
     {
       type: "restaurant",
