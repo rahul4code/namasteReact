@@ -1,4 +1,4 @@
-export const IMG_CDN_URL="https://img.freepik.com/premium-vector/food-festival-logo-design-template_96807-1188.jpg";
+export const IMG_CDN_URL="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_520,h_520/";
 
 export const RES_DETAIL_URL="https://www.swiggy.com/dapi/menu/v4/full?lat=26.8466937&lng=80.94616599999999&menuId=";
 

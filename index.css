@@ -1,4 +1,8 @@
-.header {
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* .header {
   height: 100px;
   display: flex;
   justify-content: space-between;
@@ -146,4 +150,4 @@ h2 {
   height: 300px;
   margin-top: 2em;
   background-color:mediumseagreen;
-}
+} */

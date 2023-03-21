@@ -1,8 +1,9 @@
-import RestaurantCard from "./RestaurantCard";
+import RestaurantCard from "./RestaurantCard/Card";
 import { useState, useEffect } from "react";
 import Shimmer from "../Shimmer";
 import {Link} from "react-router-dom"
 import useOnline from "../utils/useOnline";
+import OfferCarousel from "./carousel/OffersCarousel";
 
 const Body = () => {
   const [searchText, setSearchText] = useState("");
@@ -31,7 +32,6 @@ const Body = () => {
     const parsedData=await data.json()
       setFilteredRestaurant(parsedData?.data?.cards[2]?.data?.data?.cards)
     setRestaurants(parsedData?.data?.cards[2]?.data?.data?.cards)
-
   }
 
   function filterData(){
@@ -47,7 +47,7 @@ const Body = () => {
 
   const renderRestaurantCard=()=>{
     return(
-      <div className="resList">
+      <div className="pt-8 flex justify-evenly flex-wrap gap-y-12">
         {filteredRestaurant.map((item) => {
           return (
             <Link to={`/restaurantmenu/${item.data.id}`} key={item.data.id}>
@@ -61,7 +61,10 @@ const Body = () => {
 
   return (
     <>
-      <div className="bodyCard">
+    <div className="h-[340px] bg-gray-900">
+      {<OfferCarousel />}
+    </div>
+      {/* <div className="bodyCard">
         <div className="searchContainer">
         <input
           type="text"
@@ -71,10 +74,16 @@ const Body = () => {
           className="search-input"
         />
         </div>
+      </div> */}
+      <div>
+        <div className="mx-32 h-24">
+        <h2 className="text-[25px] text-gray-800 pt-8 pb-4 font-bold px-10 ">1416 restaurants</h2>
+        <div className="border-[0.05px] border-gray-100 mx-10"></div>
+          {
+          filteredRestaurant?.length >0 ? renderRestaurantCard() : <Shimmer />
+          }
+        </div>
       </div>
-      {
-      filteredRestaurant?.length >0 ? renderRestaurantCard() : <Shimmer />
-      }
     </>
   );
 };
