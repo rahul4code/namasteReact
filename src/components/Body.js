@@ -50,7 +50,7 @@ const Body = () => {
       <div className="pt-8 flex justify-evenly flex-wrap gap-y-12">
         {filteredRestaurant.map((item) => {
           return (
-            <Link to={`/restaurantmenu/${item.data.id}`} key={item.data.id}>
+            <Link to={`/restaurantdetails/${item.data.id}`} key={item.data.id}>
             <RestaurantCard {...item.data}/>
             </Link>
           );

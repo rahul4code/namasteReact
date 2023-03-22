@@ -7,7 +7,7 @@ import About from "./components/About"
 import Error from "./components/Error"
 import Contact from "./components/Contact"
 import {createBrowserRouter, RouterProvider, Outlet} from "react-router-dom";
-import RestaurantMenu from "./components/RestaurantMenu.js";
+import Restaurant from "./components/RestaurantDetails/Restaurant";
 import {Registration} from "./components/Registration/Registration";
 // import AboutWithClass from "./components/AboutWithClass.js";
 
@@ -45,8 +45,8 @@ const appRouter=createBrowserRouter([
         element:<Contact />
       },
       {
-        path:"/restaurantMenu/:id",
-        element:<RestaurantMenu/>
+        path:"/restaurantdetails/:id",
+        element:<Restaurant/>
       },
       {
         path:"/registration",
