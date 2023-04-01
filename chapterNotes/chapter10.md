@@ -47,7 +47,25 @@
 - Custom properties: Enables the use of custom properties in CSS code, which can be useful for theming or managing design tokens.
 - Media Queries: Allows for managing responsive design via automated media query manipulation.
 
-## Explain tailwind.config.css
+## Explain tailwind.config.js
+        module.exports = {
+        content: ["./src/**/*.{html,js}"],
+        theme: {
+            colors: {
+            primary: '#00c853',
+            secondary: '#2196f3',
+            },
+            extend: {
+            fontSize: {
+                '7xl': '6rem',
+            },
+            },
+        },
+        variants: {},
+        plugins: [],
+        }
+
+- Note :: Breakpoints: Tailwind includes four breakpoints: sm (640px), md (768px), lg (1024px), and xl (1280px). You can add or remove breakpoints, or customize the values themselves.
 
 ## postcssrc file 
 - Configure to tell bundler that we will be going to use Tailwind so compile the Tailwind to normal css. 
