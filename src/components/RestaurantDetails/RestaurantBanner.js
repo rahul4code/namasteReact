@@ -3,7 +3,7 @@ import { AiFillStar } from "react-icons/ai";
 
 const RestaurantBanner=()=>{
     return(
-        <>
+        <div className="pl-2 pt-8 flex justify-between border-gray-300 border-dashed border-b pb-4">
         <div>
         <p className="font-bold text-lg text-gray-800 ">Sardar Ji Ke Mashoor Chhole Bhature</p>
         <p className="text-xs pt-2 text-gray-500">North Indian, Punjabi</p>
@@ -17,7 +17,7 @@ const RestaurantBanner=()=>{
             <hr/>
             <b className="text-gray-500 font-bold text-[9.5px] p-1">10k+ ratings</b>
         </div>
-        </>
+        </div>
     )
 }
 
