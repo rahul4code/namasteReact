@@ -9,8 +9,9 @@ import FloatingMenu from "./FloatingMenu"
 import {HiOutlineCurrencyRupee} from "react-icons/hi"
 import Recommended from "./Recommended";
 
-
 const Restaurant = () => {
+  const {id}=useParams();
+
   return (
     <div className="flex items-center flex-col">
       <main className="w-6/12">
@@ -18,7 +19,7 @@ const Restaurant = () => {
           <Breadcrumb />
           <BsSearch className="text-lg text-gray-800 font-semibold" />
         </section>
-
+{id}
         <section>
         <RestaurantBanner />
         </section>
