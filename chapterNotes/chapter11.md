@@ -8,10 +8,11 @@
 - Both works parallerly.
 
 ## What is PropDrilling
-- The data that is being passed from parent to nth child, this process called Prop Drilling.
+- The data that is being passed from parent to nested child, this process called Prop Drilling.
   
 ## What is Lifting the state up ?
 - It means making the child state available to get update by moving it to parent so that it will controlled by parent and follow the instructions.
+-  It involves moving the state from a lower-level component to a higher-level component so that multiple components can share and manipulate the same state data.
 
 ## What is the role of Profiler in React dev tool ?
 - It used in optimizing the performance of app.
@@ -24,7 +25,7 @@
 
 ## createContext in React
 - createContext is a js function provided by React to create context.
-- It takes an object as an argument.
+- The createContext function takes an optional initial value as its parameter, which is the default value that will be used by all components that consume the context unless they are wrapped by a provider that sets a different value.
         
         import {createContext} from "react";
 
@@ -33,6 +34,10 @@
                 name:'Rahul',
                 email:'rahul4code@gmail.com'
             })
+
+        // or
+
+        const MyContext = createContext('default value');    
 
             // To assign a name to context fot identification while debugging.
             UserContext.displayName="UserContext"
