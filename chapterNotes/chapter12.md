@@ -46,6 +46,8 @@ Process : `When we click on add item button in UI it dispatches an action which 
 - Like the cart component is subscribed to the store means this component is reading from the store. Or `in sync` with store so whenever my store will get modify the cart component will automatically modify in the UI.
 
 ## Getting started with RTK
+ 
+ ![image](https://user-images.githubusercontent.com/42863919/232324150-b6a0f4e0-3119-4baa-971e-5d7017319668.png)
 
         npm install @reduxjs/toolkit // core of redux
 
