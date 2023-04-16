@@ -49,6 +49,8 @@ Process : `When we click on add item button in UI it dispatches an action which 
  
  ![image](https://user-images.githubusercontent.com/42863919/232324150-b6a0f4e0-3119-4baa-971e-5d7017319668.png)
 
+![image](https://user-images.githubusercontent.com/42863919/232324254-6b99e6a3-e8a2-485f-a3b3-b692ab66064b.png)
+
         npm install @reduxjs/toolkit // core of redux
 
         npm install react-redux // bridge b/w react and redux
