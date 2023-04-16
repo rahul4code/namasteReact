@@ -1,57 +1,68 @@
-import React from "react";
+import React, { lazy, Suspense, useState } from "react";
 import ReactDOM from "react-dom/client";
 import Header from "./components/Header.js";
 import Footer from "./components/Footer";
 import Body from "./components/Body";
-import About from "./components/About"
-import Error from "./components/Error"
-import Contact from "./components/Contact"
-import {createBrowserRouter, RouterProvider, Outlet} from "react-router-dom";
-import RestaurantMenu from "./components/RestaurantMenu.js";
-import {Registration} from "./components/Registration/Registration";
-import AboutWithClass from "./components/AboutWithClass.js";
+import About from "./components/About";
+import Error from "./components/Error";
+import Contact from "./components/Contact";
+import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
+import Restaurant from "./components/RestaurantDetails/Restaurant";
+import { Registration } from "./components/Registration/Registration";
+import UserContext from "./utils/UserContext.js";
+// import AboutWithClass from "./components/AboutWithClass.js";
+
+const AboutUs = lazy(() => import("./components/AboutWithClass"));
 
 const Layout = () => {
+  const [user, setUser]=useState({name:'Sign In', email:'Not Present'});
+
   return (
     <>
-      <Header />
-      <Outlet />
-      <Footer />
+      <UserContext.Provider value={{user, setUser}}>
+        <Header />
+        <Outlet />
+        <Footer />
+      </UserContext.Provider>
     </>
   );
 };
 
-
-const appRouter=createBrowserRouter([
+const appRouter = createBrowserRouter([
   {
-    path:"/",
-    element:<Layout/>,
-    errorElement:<Error/>,
-    children:[
+    path: "/",
+    element: <Layout />,
+    errorElement: <Error />,
+    children: [
       {
-        path:"/",
-        element :<Body />
+        path: "/",
+        element: <Body />,
       },
       {
-        path:"/about",
+        path: "/about",
         // element:<About />
-        element:<AboutWithClass/>
+        // element:<AboutWithClass/>
+        element: (
+          <Suspense fallback={<h1>Loading...</h1>}>
+            <AboutUs />
+          </Suspense>
+        ),
       },
       {
-        path:"/contact",
-        element:<Contact />
+        path: "/contact",
+        element: <Contact />,
       },
       {
-        path:"/restaurantMenu/:id",
-        element:<RestaurantMenu/>
+        path: "/restaurantdetails/:id",
+        element: <Restaurant />,
       },
       {
-        path:"/registration",
-        element:<Registration/>
-      }
-    ]
-  }
-])
+        path: "/registration",
+        element: <Registration />,
+      },
+    ],
+  },
+]);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<RouterProvider router={appRouter}/>);
+root.render(<RouterProvider router={appRouter} />);
