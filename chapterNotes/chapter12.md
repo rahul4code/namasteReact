@@ -47,6 +47,8 @@ Process : `When we click on add item button in UI it dispatches an action which 
 
 ## Getting started with RTK
 
+![image](https://user-images.githubusercontent.com/42863919/232324254-6b99e6a3-e8a2-485f-a3b3-b692ab66064b.png)
+
         npm install @reduxjs/toolkit // core of redux
 
         npm install react-redux // bridge b/w react and redux
