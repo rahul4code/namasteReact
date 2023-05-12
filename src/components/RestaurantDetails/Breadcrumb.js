@@ -1,4 +1,5 @@
-const Breadcrumb=()=>{
+const Breadcrumb=({data})=>{
+  const {name, areaName, city}=data
     return(
         <nav className="w-full rounded-sm text-[10px] text-gray-400 font-semibold">
         <ol className="list-reset flex">
@@ -18,7 +19,7 @@ const Breadcrumb=()=>{
               href="#"
               className="hover:text-black"
             >
-              Lucknow
+              {city}
             </a>
           </li>
           <li>
@@ -29,13 +30,13 @@ const Breadcrumb=()=>{
               href="#"
               className="hover:text-black"
             >
-              Lalbagh
+              {areaName}
             </a>
           </li>
           <li>
             <span className="mx-2 text-neutral-500 dark:text-neutral-400">/</span>
           </li>
-          <li className="text-gray-900">Sardar Ji Ke Mashoor Chhole Bhature</li>
+          <li className="text-gray-900">{name}</li>
         </ol>
       </nav>
     )

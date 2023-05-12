@@ -10,6 +10,8 @@ import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import Restaurant from "./components/RestaurantDetails/Restaurant";
 import { Registration } from "./components/Registration/Registration";
 import UserContext from "./utils/UserContext.js";
+import store from "./store.js";
+import { Provider } from "react-redux";
 // import AboutWithClass from "./components/AboutWithClass.js";
 
 const AboutUs = lazy(() => import("./components/AboutWithClass"));
@@ -19,11 +21,13 @@ const Layout = () => {
 
   return (
     <>
-      <UserContext.Provider value={{user, setUser}}>
-        <Header />
-        <Outlet />
-        <Footer />
-      </UserContext.Provider>
+      <Provider store={store}>
+        <UserContext.Provider value={{user, setUser}}>
+          <Header />
+          <Outlet />
+          <Footer />
+        </UserContext.Provider>
+      </Provider>
     </>
   );
 };

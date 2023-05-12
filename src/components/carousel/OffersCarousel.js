@@ -20,7 +20,7 @@ const OfferCarousel = () => {
     <>
       <div className="flex pr-[8rem] pl-[8rem] overflow-y-hidden h-[340px]">
         {carousel?.map((item) => (
-          <Card {...item.data} />
+          <Card key={item?.data?.bannerId} {...item.data} />
         ))}
       </div>
     </>
