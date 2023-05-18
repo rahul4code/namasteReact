@@ -1,7 +1,7 @@
 import React, { useState, useContext } from "react";
 import { IMG_CDN_URL } from "./../constants";
 import { Link } from "react-router-dom";
-// import Avatar from "./../../assets/images/Avatar.png";
+import Avatar from "./../../assets/images/Avatar.png";
 import logoSwiggy from "./../../assets/images/logoSwiggy.png";
 import { BsSearch, BsMinecart } from "react-icons/bs";
 import { TbDiscount2 } from "react-icons/tb";

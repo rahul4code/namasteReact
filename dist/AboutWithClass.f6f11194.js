@@ -584,7 +584,6 @@ var prevRefreshSig = window.$RefreshSig$;
 $parcel$ReactRefreshHelpers$3d7a.prelude(module);
 
 try {
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
 "use strict";
 Object.defineProperty(exports, "__esModule", {
     value: true
@@ -592,6 +591,7 @@ Object.defineProperty(exports, "__esModule", {
 exports.default = void 0;
 var _react = _interopRequireWildcard(require("96113f67afa54d2d"));
 var _Contact = _interopRequireDefault(require("5356e8e012147ee5"));
+var _jsxRuntime = require("574dc372e2565bb7");
 function _interopRequireDefault(obj) {
     return obj && obj.__esModule ? obj : {
         default: obj
@@ -649,29 +649,21 @@ class AboutWithClass extends _react.Component {
     }
     render() {
         console.log("Parent render");
-        return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
+        return /*#__PURE__*/ (0, _jsxRuntime.jsxs)(_jsxRuntime.Fragment, {
             children: [
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                /*#__PURE__*/ (0, _jsxRuntime.jsxs)("h1", {
                     children: [
                         "This is me ",
                         this.state.name,
                         "!! and this is my"
                     ]
-                }, void 0, true, {
-                    fileName: "src/components/AboutWithClass.js",
-                    lineNumber: 38,
-                    columnNumber: 14
-                }, this),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(_Contact.default, {
+                }),
+                /*#__PURE__*/ (0, _jsxRuntime.jsx)(_Contact.default, {
                     getNumber: this.getNumber,
                     number: this.state.number
-                }, void 0, false, {
-                    fileName: "src/components/AboutWithClass.js",
-                    lineNumber: 38,
-                    columnNumber: 68
-                }, this)
+                })
             ]
-        }, void 0, true);
+        });
     }
 }
 var _default = AboutWithClass;
@@ -682,6 +674,6 @@ exports.default = _default;
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","96113f67afa54d2d":"21dqq","5356e8e012147ee5":"cgAOG"}]},["1xC6H","e5RAA"], null, "parcelRequire2a19")
+},{"96113f67afa54d2d":"21dqq","5356e8e012147ee5":"cgAOG","574dc372e2565bb7":"6AEwr","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}]},["1xC6H","e5RAA"], null, "parcelRequire2a19")
 
 //# sourceMappingURL=AboutWithClass.f6f11194.js.map
