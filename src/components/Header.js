@@ -1,17 +1,20 @@
 import React, { useState, useContext } from "react";
 import { IMG_CDN_URL } from "./../constants";
 import { Link } from "react-router-dom";
-import Avatar from "./../../assets/images/Avatar.png";
+// import Avatar from "./../../assets/images/Avatar.png";
 import logoSwiggy from "./../../assets/images/logoSwiggy.png";
 import { BsSearch, BsMinecart } from "react-icons/bs";
 import { TbDiscount2 } from "react-icons/tb";
 import { BiHelpCircle, BiChevronDown } from "react-icons/bi";
 import { FaRegUser } from "react-icons/fa";
 import UserContext from "../utils/UserContext";
+import {useSelector} from "react-redux";
 
 const Header = (props) => {
   const [authentication, setAuthentication] = useState(false);
   const [open, setOpen] = useState(false);
+  const cartItems=useSelector(store=>store.cart.cartItems)
+  console.log(cartItems, "Cart")
   // const {user,setUser}=useContext(UserContext);
 
   return (
@@ -73,6 +76,7 @@ const Header = (props) => {
           <Link className="flex hover:text-orange-600" to="/">
             <BsMinecart className="mr-2.5 text-2xl mt-0.5" />
             Cart
+            <span className="absolute text-green-700 pl-2 pt-[5.5px] text-xs font-bold">{cartItems?.length }</span>
           </Link>
         </li>
       </ul>
