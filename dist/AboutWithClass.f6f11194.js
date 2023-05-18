@@ -584,14 +584,46 @@ var prevRefreshSig = window.$RefreshSig$;
 $parcel$ReactRefreshHelpers$3d7a.prelude(module);
 
 try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
-var _contact = require("./Contact");
-var _contactDefault = parcelHelpers.interopDefault(_contact);
-class AboutWithClass extends (0, _react.Component) {
+"use strict";
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.default = void 0;
+var _react = _interopRequireWildcard(require("96113f67afa54d2d"));
+var _Contact = _interopRequireDefault(require("5356e8e012147ee5"));
+function _interopRequireDefault(obj) {
+    return obj && obj.__esModule ? obj : {
+        default: obj
+    };
+}
+function _getRequireWildcardCache(nodeInterop) {
+    if (typeof WeakMap !== "function") return null;
+    var cacheBabelInterop = new WeakMap();
+    var cacheNodeInterop = new WeakMap();
+    return (_getRequireWildcardCache = function(nodeInterop) {
+        return nodeInterop ? cacheNodeInterop : cacheBabelInterop;
+    })(nodeInterop);
+}
+function _interopRequireWildcard(obj, nodeInterop) {
+    if (!nodeInterop && obj && obj.__esModule) return obj;
+    if (obj === null || typeof obj !== "object" && typeof obj !== "function") return {
+        default: obj
+    };
+    var cache = _getRequireWildcardCache(nodeInterop);
+    if (cache && cache.has(obj)) return cache.get(obj);
+    var newObj = {};
+    var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor;
+    for(var key in obj)if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) {
+        var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null;
+        if (desc && (desc.get || desc.set)) Object.defineProperty(newObj, key, desc);
+        else newObj[key] = obj[key];
+    }
+    newObj.default = obj;
+    if (cache) cache.set(obj, newObj);
+    return newObj;
+}
+class AboutWithClass extends _react.Component {
     constructor(props){
         super(props);
         this.state = {
@@ -627,28 +659,29 @@ class AboutWithClass extends (0, _react.Component) {
                     ]
                 }, void 0, true, {
                     fileName: "src/components/AboutWithClass.js",
-                    lineNumber: 29,
+                    lineNumber: 38,
                     columnNumber: 14
                 }, this),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _contactDefault.default), {
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(_Contact.default, {
                     getNumber: this.getNumber,
                     number: this.state.number
                 }, void 0, false, {
                     fileName: "src/components/AboutWithClass.js",
-                    lineNumber: 29,
+                    lineNumber: 38,
                     columnNumber: 68
                 }, this)
             ]
         }, void 0, true);
     }
 }
-exports.default = AboutWithClass;
+var _default = AboutWithClass;
+exports.default = _default;
 
   $parcel$ReactRefreshHelpers$3d7a.postlude(module);
 } finally {
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","./Contact":"cgAOG","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}]},["1xC6H","e5RAA"], null, "parcelRequire2a19")
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","96113f67afa54d2d":"21dqq","5356e8e012147ee5":"cgAOG"}]},["1xC6H","e5RAA"], null, "parcelRequire2a19")
 
 //# sourceMappingURL=AboutWithClass.f6f11194.js.map
