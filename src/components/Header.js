@@ -21,6 +21,7 @@ const Header = (props) => {
     <div className="flex justify-between pt-4 pb-4 shadow-lg">
       <div className="flex">
         <img
+        data-testid={"header__logo"}
           alt="NoImg"
           className="h-12 pl-40 z-30 hover:scale-110 cursor-pointer"
           src={logoSwiggy}
@@ -76,7 +77,7 @@ const Header = (props) => {
           <Link className="flex hover:text-orange-600" to="/">
             <BsMinecart className="mr-2.5 text-2xl mt-0.5" />
             Cart
-            <span className="absolute text-green-700 pl-2 pt-[5.5px] text-xs font-bold">{cartItems?.length }</span>
+            <span data-testid="cart__id" className="absolute text-green-700 pl-2 pt-[5.5px] text-xs font-bold">{cartItems?.length }</span>
           </Link>
         </li>
       </ul>

@@ -59,7 +59,7 @@ const Body = () => {
 
   return (
     <div>
-      <div className="bg-gray-900">{<OfferCarousel />}</div>
+      <div data-testid="offerCarousel" className="bg-gray-900">{<OfferCarousel />}</div>
       <div className="mx-32">
         <h2 className="text-[25px] text-gray-800 pt-8 pb-4 font-bold px-10 ">
           1416 restaurants
