@@ -1,28 +1,24 @@
-import { useEffect,useState } from "react";
-import Card from "./Card"
+import Card from "./Card";
 
-const OfferCarousel = () => {
-  const [carousel, setCarousel] = useState([]);
-
-  useEffect(() => {
-    getCarousel();
-  }, []);
-
-  const getCarousel = async () => {
-    const data = await fetch(
-      "https://www.swiggy.com/dapi/restaurants/list/v5?lat=26.8466937&lng=80.94616599999999&page_type=DESKTOP_WEB_LISTING"
-    );
-    const parsedData = await data.json();
-    setCarousel(parsedData?.data?.cards[0]?.data?.data?.cards);
-  };
-
+const OfferCarousel = ({ carousel }) => {
   return (
     <>
-      <div className="flex pr-[8rem] pl-[8rem] overflow-y-hidden h-[340px]">
-        {carousel?.map((item) => (
-          <Card key={item?.data?.bannerId} {...item.data} />
-        ))}
-      </div>
+      {carousel?.length > 0 ? (
+        <div className="flex pr-[8rem] h-[340px] pl-[8rem] overflow-y-hidden">
+          {
+            carousel?.map((item) => (
+              <Card key={item?.data?.bannerId} {...item.data} />
+            ))
+          }
+        </div>
+      ) : (
+        <div className="flex justify-center items-center flex-col h-[340px]">
+            <div class="animate-spin rounded-full h-16 w-16 border-t-2 border-b-2 border-gray-300"></div>
+            <h2 className="text-gray-300 text-[1.7rem] mt-8 font-normal">
+              Looking for great food near you ...
+            </h2>
+          </div>
+      )}
     </>
   );
 };

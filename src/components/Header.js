@@ -8,24 +8,34 @@ import { TbDiscount2 } from "react-icons/tb";
 import { BiHelpCircle, BiChevronDown } from "react-icons/bi";
 import { FaRegUser } from "react-icons/fa";
 import UserContext from "../utils/UserContext";
-import {useSelector} from "react-redux";
+import { useSelector } from "react-redux";
 
 const Header = (props) => {
   const [authentication, setAuthentication] = useState(false);
   const [open, setOpen] = useState(false);
-  const cartItems=useSelector(store=>store.cart.cartItems)
-  console.log(cartItems, "Cart")
+  const cartItems = useSelector((store) => store.cart.cartItems);
+  console.log(cartItems, "Cart");
   // const {user,setUser}=useContext(UserContext);
 
   return (
     <div className="flex justify-between pt-4 pb-4 shadow-lg">
       <div className="flex">
-        <img
+        {/* <img
         data-testid={"header__logo"}
           alt="NoImg"
-          className="h-12 pl-40 z-30 hover:scale-110 cursor-pointer"
+          className="h-12 pl-40 transform hover:-scale transition-transform duration-300 cursor-pointer"
           src={logoSwiggy}
-        />
+        /> */}
+        <div className="relative">
+          <img src={logoSwiggy} alt="Your Image" className="h-12 pl-40" />
+          <div className="h-12 pl-40 absolute inset-0 flex justify-center items-center opacity-0 hover:opacity-100 transition-opacity duration-300">
+            <img
+              src={logoSwiggy}
+              alt="Your Image"
+              className="transform hover:cursor-pointer scale-110 transition-transform duration-300"
+            />
+          </div>
+        </div>
         <span className="flex  hover:text-orange-600 cursor-pointer">
           <p className="text-gray-800 text-base font-semibold pt-[9px] pl-10 hover:text-orange-600 cursor-pointer">
             Other
@@ -57,8 +67,8 @@ const Header = (props) => {
           </Link>
         </li>
         <UserContext.Consumer>
-          { ({user, setUser}) => 
-              <li
+          {({ user, setUser }) => (
+            <li
               className="px-7"
               onClick={() =>
                 setUser({ name: "Rahul Gupta", email: "rahul4Code@gmail.com" })
@@ -69,15 +79,19 @@ const Header = (props) => {
                 {user?.name}
               </Link>
             </li>
-            
-          }
+          )}
         </UserContext.Consumer>
 
         <li className="px-7">
           <Link className="flex hover:text-orange-600" to="/">
             <BsMinecart className="mr-2.5 text-2xl mt-0.5" />
             Cart
-            <span data-testid="cart__id" className="absolute text-green-700 pl-2 pt-[5.5px] text-xs font-bold">{cartItems?.length }</span>
+            <span
+              data-testid="cart__id"
+              className="absolute text-green-700 pl-2 pt-[5.5px] text-xs font-bold"
+            >
+              {cartItems?.length}
+            </span>
           </Link>
         </li>
       </ul>
