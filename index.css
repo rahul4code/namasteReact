@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+.hidden-scrollbar
+{
+  scrollbar-width: none
+}
+
 /* .header {
   height: 100px;
   display: flex;

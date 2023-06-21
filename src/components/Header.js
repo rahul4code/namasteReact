@@ -26,17 +26,10 @@ const Header = (props) => {
           className="h-12 pl-40 transform hover:-scale transition-transform duration-300 cursor-pointer"
           src={logoSwiggy}
         /> */}
-        <div className="relative">
-          <img src={logoSwiggy} alt="Your Image" className="h-12 pl-40" />
-          <div className="h-12 pl-40 absolute inset-0 flex justify-center items-center opacity-0 hover:opacity-100 transition-opacity duration-300">
-            <img
-              src={logoSwiggy}
-              alt="Your Image"
-              className="transform hover:cursor-pointer scale-110 transition-transform duration-300"
-            />
-          </div>
-        </div>
-        <span className="flex  hover:text-orange-600 cursor-pointer">
+
+          <img src={logoSwiggy} alt="Your Image" className="h-12 pl-40 transition-transform duration-300 hover:scale-105 cursor-pointer" />
+
+        <span className="flex  hover:text-orange-600 cursor-pointer"> 
           <p className="text-gray-800 text-base font-semibold pt-[9px] pl-10 hover:text-orange-600 cursor-pointer">
             Other
           </p>

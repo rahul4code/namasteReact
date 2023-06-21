@@ -143,8 +143,8 @@
     }
   }
 })({"1xC6H":[function(require,module,exports) {
-var Refresh = require("2030c94fa001c2b2");
-var ErrorOverlay = require("bd7747ae6275a5e7");
+var Refresh = require("4c902a13ef72f584");
+var ErrorOverlay = require("e9bb4344b2663fcb");
 Refresh.injectIntoGlobalHook(window);
 window.$RefreshReg$ = function() {};
 window.$RefreshSig$ = function() {
@@ -163,7 +163,7 @@ window.addEventListener("parcelhmraccept", ()=>{
     ErrorOverlay.dismissRuntimeErrors();
 });
 
-},{"2030c94fa001c2b2":"786KC","bd7747ae6275a5e7":"1dldy"}],"e5RAA":[function(require,module,exports) {
+},{"4c902a13ef72f584":"786KC","e9bb4344b2663fcb":"1dldy"}],"e5RAA":[function(require,module,exports) {
 var global = arguments[3];
 var HMR_HOST = null;
 var HMR_PORT = null;
@@ -589,9 +589,9 @@ Object.defineProperty(exports, "__esModule", {
     value: true
 });
 exports.default = void 0;
-var _react = _interopRequireWildcard(require("96113f67afa54d2d"));
-var _Contact = _interopRequireDefault(require("5356e8e012147ee5"));
-var _jsxRuntime = require("574dc372e2565bb7");
+var _react = _interopRequireWildcard(require("8dc5264061d3ac40"));
+var _Contact = _interopRequireDefault(require("81bea31cd146eea5"));
+var _jsxRuntime = require("5935b13718dee81d");
 function _interopRequireDefault(obj) {
     return obj && obj.__esModule ? obj : {
         default: obj
@@ -674,6 +674,6 @@ exports.default = _default;
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"96113f67afa54d2d":"21dqq","5356e8e012147ee5":"cgAOG","574dc372e2565bb7":"6AEwr","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}]},["1xC6H","e5RAA"], null, "parcelRequire2a19")
+},{"8dc5264061d3ac40":"21dqq","81bea31cd146eea5":"cgAOG","5935b13718dee81d":"6AEwr","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}]},["1xC6H","e5RAA"], null, "parcelRequire2a19")
 
 //# sourceMappingURL=AboutWithClass.f6f11194.js.map
