@@ -1,6 +1,6 @@
 # HTML vs React
  1. React is Library where HTML is a Markup language.
- 2. HTML uses different attribute than HTML. eg like class as className because it's a reserved keyword in js and React uses JSX which itself a js extension.
+ 2. React uses different attribute than HTML. eg like class as className because it's a reserved keyword in js and React uses JSX which itself a js extension.
  3. Both looks quite similar but React doing lot of things behind the scene, it does reconciliation (by using diffing algo). It uses React.createElement which returns an object that later on represents a DOM element.
  4. React is better to use while you are managing state while HTML is built of tags that has their own use cases.
  5. React is slow as compare to HTML because it basically do lot of things behind the scene.
