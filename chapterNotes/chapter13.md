@@ -71,15 +71,43 @@
         - runtime is a place where it is running so it will set automatically as per the property
     - While writing test cases if anything breaks in the asset or data part we basically mock it.
       - Suppose for .png file it will break to make it work configure the property in jest.config.js
-        - Search for property called 
+        - Search for property called moduleNameMapper in jest.config.js and add "\\.(png|jpg)$":"../mocks/imgHandler.js" -> where the handler file will be exporting an empty string.
 
 ## Unit Testing of Header
 - render function
+- store import
+- StaticRouter to overcome href error that occurs due to absence of createBrowserRouter Link (react-router-dom) and we can not configure this in js-dom or within render ; This router works without browser. `import { StaticRouter } from "react-router-dom/server";`
+- Best practice to use `data-testid={""}`
 
-##
+## Intrgation testing for Search functionality
+- render body
+- Follow all the prev step to render the component
+- Now you will get an error for fetch : `fetch is not defined for js-dom as it is a browser thing`, to fix it
+  - We have to use `global.fetch=jest.fn(()=>{})` jest provides a dummy function called jest.fn().
+  - fetch at the end returns a promise that provides a readble stream further we convrets that stream to json data so we have handle the same in the dummy function.
 
+        global.fetch=jest.fn(()=>{
+          Promise.resolve({
+            json: Promise.resolve({}) // Promise to handle await data.json() and can pass the mock data
 
+          })
+        })
+- **Fix the warning : async await**
+- toBeInTheDocument : Not a good practice to use
+- If you have to wait for some component to load on screen after some loader you can use a superpower function called `waitFor()` provided by jest.
+- This function will wait till the info component is not properly loaded then "after" code will execute.
+
+         await waitFor(()=>expect(bodyComponent.getAllByTestId('someCompId_afterloadingShimmer'))) // Since its awaiting so need to make the function async
+
+## Testing for input Search and firing event to get the search results
+- Get the text box id using getByTestId
+- Now to fire the event there is a function called fireEvent provided by `@testing-library/react`
+  
+      fireEvent.change(input, {target:{value:"food"}}) // mocking event.target.value inside it
+
+- Now fire the click event by using the fireEvent function and expect the result by counting its no of restaurant card or its children
 
 ### Diff between JSON vs Javascript Object 
 ### JSDOM ?
+### What is Static Router
 

@@ -143,8 +143,8 @@
     }
   }
 })({"1xC6H":[function(require,module,exports) {
-var Refresh = require("2030c94fa001c2b2");
-var ErrorOverlay = require("bd7747ae6275a5e7");
+var Refresh = require("4c902a13ef72f584");
+var ErrorOverlay = require("e9bb4344b2663fcb");
 Refresh.injectIntoGlobalHook(window);
 window.$RefreshReg$ = function() {};
 window.$RefreshSig$ = function() {
@@ -163,7 +163,7 @@ window.addEventListener("parcelhmraccept", ()=>{
     ErrorOverlay.dismissRuntimeErrors();
 });
 
-},{"2030c94fa001c2b2":"786KC","bd7747ae6275a5e7":"1dldy"}],"e5RAA":[function(require,module,exports) {
+},{"4c902a13ef72f584":"786KC","e9bb4344b2663fcb":"1dldy"}],"e5RAA":[function(require,module,exports) {
 var global = arguments[3];
 var HMR_HOST = null;
 var HMR_PORT = null;
@@ -584,14 +584,14 @@ var prevRefreshSig = window.$RefreshSig$;
 $parcel$ReactRefreshHelpers$3d7a.prelude(module);
 
 try {
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
 "use strict";
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
 exports.default = void 0;
-var _react = _interopRequireWildcard(require("96113f67afa54d2d"));
-var _Contact = _interopRequireDefault(require("5356e8e012147ee5"));
+var _react = _interopRequireWildcard(require("8dc5264061d3ac40"));
+var _Contact = _interopRequireDefault(require("81bea31cd146eea5"));
+var _jsxRuntime = require("5935b13718dee81d");
 function _interopRequireDefault(obj) {
     return obj && obj.__esModule ? obj : {
         default: obj
@@ -649,29 +649,21 @@ class AboutWithClass extends _react.Component {
     }
     render() {
         console.log("Parent render");
-        return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
+        return /*#__PURE__*/ (0, _jsxRuntime.jsxs)(_jsxRuntime.Fragment, {
             children: [
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                /*#__PURE__*/ (0, _jsxRuntime.jsxs)("h1", {
                     children: [
                         "This is me ",
                         this.state.name,
                         "!! and this is my"
                     ]
-                }, void 0, true, {
-                    fileName: "src/components/AboutWithClass.js",
-                    lineNumber: 38,
-                    columnNumber: 14
-                }, this),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(_Contact.default, {
+                }),
+                /*#__PURE__*/ (0, _jsxRuntime.jsx)(_Contact.default, {
                     getNumber: this.getNumber,
                     number: this.state.number
-                }, void 0, false, {
-                    fileName: "src/components/AboutWithClass.js",
-                    lineNumber: 38,
-                    columnNumber: 68
-                }, this)
+                })
             ]
-        }, void 0, true);
+        });
     }
 }
 var _default = AboutWithClass;
@@ -682,6 +674,6 @@ exports.default = _default;
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","96113f67afa54d2d":"21dqq","5356e8e012147ee5":"cgAOG"}]},["1xC6H","e5RAA"], null, "parcelRequire2a19")
+},{"8dc5264061d3ac40":"21dqq","81bea31cd146eea5":"cgAOG","5935b13718dee81d":"6AEwr","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}]},["1xC6H","e5RAA"], null, "parcelRequire2a19")
 
 //# sourceMappingURL=AboutWithClass.f6f11194.js.map
