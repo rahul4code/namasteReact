@@ -4,7 +4,7 @@
  `bable-plugin-transform-remove-console` is a package to remove consoles in project.
 
 ## What is JSX ?
-- JSX is a HTML like syntax but it is not HTML inside javascript.
+- JSX is a HTML like syntax but it is not HTML it is HTML inside javascript.
 - Babel understands JSX i.e it reads your code line by line and compile it.
 - It used React.createElement behind the scene and then it converts to object and then objects converts to HTML. (with the help of babel)
 - **Babel** is a compiler that also create polyfills for you.
