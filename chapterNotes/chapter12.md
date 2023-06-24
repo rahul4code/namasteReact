@@ -151,4 +151,6 @@ Process : `When we click on add item button in UI it dispatches an action which 
    
 ## QNA
 - Why not using useDispatch directly ?
+    - Because the useDispatch will work like this `useDispatch()('SOME_ACTION')`
+    - `const dispatch = useDispatch()` provides a more efficient and readable way to access the dispatch function within functional components.
   

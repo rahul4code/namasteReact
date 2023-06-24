@@ -108,6 +108,35 @@
 - Now fire the click event by using the fireEvent function and expect the result by counting its no of restaurant card or its children
 
 ### Diff between JSON vs Javascript Object 
+- JSON (JavaScript Object Notation) and JavaScript objects are related but distinct concepts
+  - JSON has a stricter syntax compared to JavaScript objects. JSON syntax requires property names to be wrapped in double quotes, while JavaScript objects allow property names to be unquoted or wrapped in single quotes.
+  - JSON is primarily used as a data interchange format. It is a standardized format for exchanging data between systems and languages. JavaScript objects, on the other hand, are native data structures within the JavaScript programming language and are used for representing and manipulating data within JavaScript applications.
+  - Serialization and Deserialization: JSON can be serialized into a string representation using JSON.stringify(), and deserialized back into a JavaScript object using JSON.parse(). This enables the transmission and storage of data in a portable and standardized format. JavaScript objects, being native to JavaScript, don't require serialization or deserialization.
+  - JavaScript objects can contain functions as properties, allowing for behavior and logic to be encapsulated within objects. JSON, being a data format, doesn't support functions
+  - 
 ### JSDOM ?
+- jsdom is a JavaScript library that provides a virtual implementation of the web browser's Document Object Model (DOM) within Node.js or a browser-like environment. 
+- It allows you to create and manipulate a DOM tree, simulate browser behavior, and perform various tasks related to web scraping, testing, and server-side rendering.
+- With jsdom, you can programmatically create a virtual DOM environment, similar to what you would find in a web browser, complete with HTML, CSS, and JavaScript support. This enables you to interact with HTML elements, modify their content, add event listeners, execute JavaScript code, and perform other operations as if you were working with a real web page.
+- Some common use cases for jsdom include:
+    - Testing: jsdom is often used in JavaScript testing frameworks, such as Jest, Mocha, or Karma, to provide a simulated DOM environment for running unit tests on components or code that depend on the DOM. It allows you to write tests that interact with the DOM without the need for an actual browser.
+    - Web scraping : loading HTML documents, accessing elements, extracting information, and performing DOM-based operations
+    - **Server-side rendering: jsdom is used in server-side rendering frameworks, like Next.js or Gatsby, to render React or other JavaScript-based components into HTML on the server. It allows you to generate pre-rendered HTML pages that can be sent to the client for faster initial page loads and improved search engine optimization (SEO).**
 ### What is Static Router
+- The StaticRouter is a component provided by React Router that allows server-side rendering (SSR) of a React application.
+-  It is specifically designed for rendering React components on the server and is commonly used in conjunction with frameworks like Express or Next.js.
+- The purpose of the StaticRouter is to match the current URL path with a set of predefined routes and render the corresponding React components based on that match.
+- It provides a way to perform SSR without relying on browser history or client-side routing.
 
+      const App = (
+        <StaticRouter location={req.url} context={context}>
+          {/* Your React application */}
+        </StaticRouter>
+      );
+
+1. location: Specifies the current URL path received from the server. This allows the router to match the path and render the corresponding components.
+
+2. context: An optional object that holds information about the router's state during rendering. It can be used to capture redirects, handle error scenarios, or pass data to the rendered components.
+
+**Note :** 
+It's worth noting that on the client-side, React Router typically uses the BrowserRouter, which relies on browser history and handles routing based on changes in the URL path. The StaticRouter, on the other hand, is specifically designed for server-side rendering and doesn't rely on browser history.
