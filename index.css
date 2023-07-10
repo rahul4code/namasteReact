@@ -7,6 +7,11 @@
   scrollbar-width: none
 }
 
+.ribbon-border{
+  border-left: 10px solid transparent;
+  border-top:5px solid gray;
+}
+
 /* .header {
   height: 100px;
   display: flex;

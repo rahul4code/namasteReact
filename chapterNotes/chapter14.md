@@ -32,5 +32,16 @@
 `## The more planning you will do the better code you will write`
 
 ## What is Low Level Design ?
+- Low-level design (LLD) refers to the detailed architectural and implementation design of a software system or component. It is a phase in the software development life cycle (SDLC) that follows the high-level design (HLD) phase. While HLD focuses on the overall system architecture and functionality, LLD delves into the specifics of individual modules, classes, functions, and their interactions.\
+  
+PS: [Cover SDLC and HLD]
 
 ## useSearchParams
+- In React, the useSearchParams hook is used to access and manipulate query parameters in the URL. It is part of the react-router-dom library, specifically the react-router-dom@^6.0.0 version.
+
+      const [searchParams, setSearchParams] = useSearchParams();
+
+      // Updating Search Params
+      
+      searchParams.set('page', '2');
+      setSearchParams(searchParams); 

@@ -125,5 +125,31 @@
 - In next component import UserContext and use `user` and `setUser` to update the value.
 
 ## Context.Provider and Context.Consumer
+- **Context.Provider** is used to define a context and provide the data to its child components. It accepts a value prop which can be any JavaScript value (such as an object, array, or string) that you want to share with the child components.
+
+        return (
+                <MyContext.Provider value={/* data to be shared */}>
+                {/* Child components */}
+                </MyContext.Provider>
+            );
+        
+- To access the data from the context, you can use Context.Consumer in the child components. It allows you to consume the data and use it within the component.
+
+            <MyContext.Consumer>
+                {value => (
+                <div>
+                    {/* Use the value from the context */}
+                    {value}
+                </div>
+                )}
+            </MyContext.Consumer>
+
 
 ## Can be a Context inside other context(Nested context) and how to manage multiple context
+- Yes, you can create a context inside another context
+  
+        <FirstContext.Provider value={/* data for first context */}>
+        <SecondContext.Provider value={/* data for second context */}>
+          {/* Child components */}
+        </SecondContext.Provider>
+      </FirstContext.Provider>

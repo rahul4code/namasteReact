@@ -3,8 +3,10 @@
 - Infinite scroll
 - Map tracking
 - What is piracy
-- Observables
-- WebRTC
+### Observables : Reactive programming
+- In reactive programming, an Observable emits values over time, and multiple entities can subscribe to observe and react to those values. Observables provide a way to handle asynchronous operations, such as network requests, user input, and other asynchronous events, in a more structured and reactive manner..
+  
+### WebRTC
 
 ### To ways to handle live data
 - Web Sockets:
@@ -39,3 +41,5 @@
 - Dive deep into how browsers work
 - pros and cons of using useMemo
 - useRef polyfills
+- constructor function in js
+- Generator functions

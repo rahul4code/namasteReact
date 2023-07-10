@@ -17,6 +17,10 @@ const Header = (props) => {
   console.log(cartItems, "Cart");
   // const {user,setUser}=useContext(UserContext);
 
+  const handleRedirect=()=>{
+    window.location.href="http://localhost:1234"
+  }
+
   return (
     <div className="flex justify-between pt-4 pb-4 shadow-lg">
       <div className="flex">
@@ -27,7 +31,7 @@ const Header = (props) => {
           src={logoSwiggy}
         /> */}
 
-          <img src={logoSwiggy} alt="Your Image" className="h-12 pl-40 transition-transform duration-300 hover:scale-105 cursor-pointer" />
+          <img src={logoSwiggy} alt="Your Image" onClick={handleRedirect} className="h-12 pl-40 transition-transform duration-300 hover:scale-105 cursor-pointer" />
 
         <span className="flex  hover:text-orange-600 cursor-pointer"> 
           <p className="text-gray-800 text-base font-semibold pt-[9px] pl-10 hover:text-orange-600 cursor-pointer">
