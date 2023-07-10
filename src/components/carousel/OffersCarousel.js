@@ -9,14 +9,16 @@ const OfferCarousel = ({ carousel }) => {
     console.log(scrollContainerRef, "scrollContainer");
     switch (type) {
       case "left":
-        scrollContainerRef.current.scrollLeft -= 500;
+        scrollContainerRef.current.scrollLeft -= 1000;
         setTimeout(() => {
           scrollContainerRef.current.parentElement.firstChild.style.visibility =
             "hidden";
         }, 200);
+        scrollContainerRef.current.parentElement.firstChild.style.visibility =
+            "hidden";
         break;
       case "right":
-        scrollContainerRef.current.scrollLeft += 500;
+        scrollContainerRef.current.scrollLeft += 1000;
         scrollContainerRef.current.parentElement.firstChild.style.visibility =
           "visible";
       default:

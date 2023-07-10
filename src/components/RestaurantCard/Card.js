@@ -8,11 +8,18 @@ const RestaurantCard = ({
   costForTwoString,
   slaString,
   cuisines,
+  ribbon,
   aggregatedDiscountInfo
 }) => {
   let modifiedCuisnes = cuisines.join(", ");
   return (
     <div className="p-4 w-72 border-none hover:shadow-xl">
+      {
+        ribbon && <div className="absolute ml-[-10px] grid">
+        <span className="bg-gray-700 px-2 py-1 text-white font-bold text-sm">Promoted</span>
+        <div className="h-0 w-0 ribbon-border"></div>
+      </div>
+      }
       <img
         src={
           "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/" +
