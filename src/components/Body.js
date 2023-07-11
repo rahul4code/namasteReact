@@ -1,9 +1,11 @@
-import RestaurantCard from "./RestaurantCard/Card";
+
 import { useState, useEffect } from "react";
-import Shimmer from "../components/shimmer/HomeShimmer";
-import { Link } from "react-router-dom";
+import Shimmer from "./Shimmer/HomeShimmer";
 import useOnline from "../utils/useOnline";
-import OfferCarousel from "./carousel/OffersCarousel";
+import OfferCarousel from "./Carousel/OffersCarousel";
+import FixedHeader from "./header/fixedHeader";
+import RestaurantContainer from "../containers/RestaurantContainer";
+
 const Body = () => {
   const [searchText, setSearchText] = useState("");
   const [restaurants, setRestaurants] = useState([]);
@@ -14,6 +16,11 @@ const Body = () => {
   useEffect(() => {
     getData();
   }, []);
+
+  // useEffect(()=>{
+  //     const scrollPosition=window.screenY
+  //       console.log(scrollPosition, "scroolled")
+  // },[])
 
   useEffect(() => {
     if (searchText?.length > 2) {
@@ -47,32 +54,9 @@ const Body = () => {
   const renderRestaurantCard = () => {
     return (
       <>
-        <div className="sticky top-0 flex justify-between px-12 pt-9 bg-white">
-          <h2 className="text-[27px] text-gray-700 font-bold">
-            324 restaurants
-          </h2>
-          <ol className="flex gap-11 text-[1rem] text-gray-500 pt-4">
-            <li className="hover:text-gray-800 cursor-pointer border-b-2 pb-4 border-gray-700">Relevance</li>
-            <li className="hover:text-gray-800 cursor-pointer">Delivery Time</li>
-            <li className="hover:text-gray-800 cursor-pointer">Rating</li>
-            <li className="hover:text-gray-800 cursor-pointer">Cost: Low to High</li>
-            <li className="hover:text-gray-800 cursor-pointer">Cost: High to Low</li>
-            <li className="hover:text-gray-800 cursor-pointer">Filters </li>
-          </ol>
-        </div>
+        <FixedHeader />
         <div className="border-[0.05px] border-gray-100 mx-10"></div>
-        <div className="pt-5 flex justify-evenly flex-wrap gap-y-12">
-          {filteredRestaurant.map((item) => {
-            return (
-              <Link
-                to={`/restaurantdetails/${item.data.id}`}
-                key={item.data.id}
-              >
-                <RestaurantCard {...item.data} />
-              </Link>
-            );
-          })}
-        </div>
+        <RestaurantContainer restaurants={filteredRestaurant}/>
       </>
     );
   };
