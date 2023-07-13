@@ -11,7 +11,7 @@ const RestaurantCard = ({
   ribbon,
   aggregatedDiscountInfo
 }) => {
-  let modifiedCuisnes = cuisines.join(", ");
+  let modifiedCuisnes = cuisines?.join(", ");
   return (
     <div className="p-4 w-72 border-none hover:shadow-xl">
       {

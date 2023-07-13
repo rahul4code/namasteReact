@@ -12,6 +12,12 @@
   border-top:5px solid gray;
 }
 
+.active-tab{
+  border-bottom-width: 2px;
+  --tw-border-opacity: 1;
+  border-color: rgb(55 65 81 / var(--tw-border-opacity));
+}
+
 /* .header {
   height: 100px;
   display: flex;
