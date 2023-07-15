@@ -2,9 +2,9 @@
 import { useState, useEffect } from "react";
 import Shimmer from "./Shimmer/HomeShimmer";
 import OfferCarousel from "./Carousel/OffersCarousel";
-import FixedHeader from "./header/fixedHeader";
 import RestaurantContainer from "../containers/RestaurantContainer";
 import { useGetRestaurants } from "../utils/useGetRestaurants";
+import TabHeader from "./Header/TabHeader";
 
 const Body = () => {
   const [restaurants, setRestaurants] = useState([]);
@@ -25,7 +25,7 @@ const Body = () => {
   const renderRestaurantCard = () => {
     return (
       <>
-        <FixedHeader />
+        <TabHeader />
         <div className="border-[0.05px] border-gray-100 mx-10"></div>
         <RestaurantContainer restaurants={restaurants}/>
       </>

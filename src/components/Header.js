@@ -22,7 +22,7 @@ const Header = (props) => {
   }
 
   return (
-    <div className="flex justify-between pt-4 pb-4 shadow-lg">
+    <div className="flex justify-between pt-4 pb-4 shadow-lg sticky top-0 bg-white z-10">
       <div className="flex">
         {/* <img
         data-testid={"header__logo"}

@@ -1,22 +1,25 @@
-import React, {useState, useEffect} from "react";
+import React, {useState, useEffect, useRef} from "react";
 import { SlEqualizer } from "react-icons/sl";
 import { Link } from "react-router-dom";
 import { useSearchParams } from "react-router-dom";
 
-const FixedHeader = () => {
+const TabHeader = () => {
   const [searchParams]=useSearchParams();
   const [activeTab, setActivetab]=useState(searchParams.get("SortBy"))
+
+  const headerRef=useRef(null);
 
   useEffect(()=>{
     if(!searchParams.get("SortBy")){
       setActivetab("RELEVANCE")
     }else{
+      headerRef.current.scrollIntoView({ behavior: 'smooth' })
       setActivetab(searchParams.get("SortBy"))
     }
   },[searchParams])
 
   return (
-    <div className="sticky top-0 flex justify-between px-12 pt-9 bg-white z-10">
+    <div className="sticky top-0 flex justify-between px-12 pt-9 bg-white z-10" ref={headerRef}>
       <h2 className="text-[27px] text-gray-700 font-bold">324 restaurants</h2>
       <ol className="flex text-[1rem] text-gray-600 pt-1 gap-9">
         <li className={activeTab==="RELEVANCE" ? "hover:text-gray-800 cursor-pointer active-tab" : "hover:text-gray-800 cursor-pointer"}>
@@ -42,4 +45,4 @@ const FixedHeader = () => {
   );
 };
 
-export default FixedHeader;
+export default TabHeader;
