@@ -18,6 +18,8 @@ const TabHeader = () => {
     }
   },[searchParams])
 
+  console.log("Tab Header")
+
   return (
     <div className="sticky top-0 flex justify-between px-12 pt-9 bg-white z-10" ref={headerRef}>
       <h2 className="text-[27px] text-gray-700 font-bold">324 restaurants</h2>

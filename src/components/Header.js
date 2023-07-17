@@ -14,7 +14,7 @@ const Header = (props) => {
   const [authentication, setAuthentication] = useState(false);
   const [open, setOpen] = useState(false);
   const cartItems = useSelector((store) => store.cart.cartItems);
-  console.log(cartItems, "Cart");
+  // console.log(cartItems, "Cart");
   // const {user,setUser}=useContext(UserContext);
 
   const handleRedirect=()=>{

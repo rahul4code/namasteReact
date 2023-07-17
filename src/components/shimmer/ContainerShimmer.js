@@ -1,7 +1,7 @@
 import React from 'react'
 import { CardShimmer } from './CardShimmer'
 
-const noOfCard=Array(12).fill(null)
+const noOfCard=Array(15).fill(null)
 
 const ContainerShimmer = () => {
   return (

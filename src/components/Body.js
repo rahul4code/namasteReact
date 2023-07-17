@@ -4,11 +4,18 @@ import Shimmer from "./Shimmer/HomeShimmer";
 import OfferCarousel from "./Carousel/OffersCarousel";
 import RestaurantContainer from "../containers/RestaurantContainer";
 import { useGetRestaurants } from "../utils/useGetRestaurants";
+import { useSearchParams } from "react-router-dom";
+import { getRestaurantsURL } from "../utils/getRestaurantsURL";
 import TabHeader from "./Header/TabHeader";
 
 const Body = () => {
-  const [restaurants, setRestaurants] = useState([]);
+  const [searchParams]=useSearchParams()
+  const sortBy=searchParams.get("SortBy")
+  const sortVal=sortBy ?? "RELEVANCE"
   const [carousel,setCarousel]=useState([])
+
+  const url=getRestaurantsURL(sortBy, 0)
+  const {restaurants} = useGetRestaurants(sortBy, 0, url);
 
   useEffect(() => {
     getData();
@@ -18,19 +25,19 @@ const Body = () => {
     const url=`https://www.swiggy.com/dapi/restaurants/list/v5?lat=26.8466937&lng=80.94616599999999&page_type=DESKTOP_WEB_LISTING`
     const data = await fetch(url);
     const parsedData = await data.json();
-    setRestaurants(parsedData?.data?.cards[2]?.data?.data?.cards);
     setCarousel(parsedData?.data?.cards[0]?.data?.data?.cards);
   }
   
-  const renderRestaurantCard = () => {
+  const renderRestaurantSection = () => {
     return (
       <>
-        <TabHeader />
         <div className="border-[0.05px] border-gray-100 mx-10"></div>
-        <RestaurantContainer restaurants={restaurants}/>
+        <RestaurantContainer sortBy={sortVal}/>
       </>
     );
   };
+
+  console.log("from Tab Body")
 
   return (
     <>
@@ -38,7 +45,8 @@ const Body = () => {
         {<OfferCarousel carousel={carousel}/>}
       </div>
       <div className="mx-32">
-        {restaurants?.length > 0 ? renderRestaurantCard() : <Shimmer />}
+      <TabHeader />
+        {restaurants?.length > 0 ? renderRestaurantSection() : <Shimmer />}
       </div>
     </>
   );
