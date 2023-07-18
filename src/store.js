@@ -1,11 +1,11 @@
 import { combineReducers, configureStore } from "@reduxjs/toolkit";
 import cartSlice from "./slices/cartSlice";
-import activeTabSlice from "./slices/activeTabSlice";
+import activeOffset from "./slices/activeOffset";
 
 const store = configureStore({
   reducer: {
     cart: cartSlice,
-    activeTab:activeTabSlice
+    restaurantOptions:activeOffset
   },
 });
 
