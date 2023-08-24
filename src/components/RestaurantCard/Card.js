@@ -9,14 +9,14 @@ const RestaurantCard = ({
   slaString,
   cuisines,
   ribbon,
-  aggregatedDiscountInfo
+  aggregatedDiscountInfoV3
 }) => {
   let modifiedCuisnes = cuisines?.join(", ");
   return (
-    <div className="p-4 w-72 border-none hover:shadow-xl">
+    <div className="p-4 w-80 border-none duration-300 hover:scale-105">
       {
-        ribbon && <div className="absolute ml-[-10px] grid">
-        <span className="bg-gray-700 px-2 py-1 text-white font-bold text-sm">Promoted</span>
+        aggregatedDiscountInfoV3 && <div className="absolute ml-[-10px] grid">
+        <span className="bg-gray-700 px-2 py-1 text-white font-semibold text-sm">{aggregatedDiscountInfoV3?.header +" "+ aggregatedDiscountInfoV3?.subHeader}</span>
         <div className="h-0 w-0 ribbon-border"></div>
       </div>
       }
@@ -27,22 +27,24 @@ const RestaurantCard = ({
         }
         alt="foodImg"
         width="250px"
+        className="rounded-lg"
       />
-      <h2 className="pt-3 font-semibold break-normal"> {name} </h2>
-      <p className="text-xs inline-flex text-gray-500">{modifiedCuisnes}</p>
-      <CardDescription avgRating={avgRating} costForTwoString={costForTwoString} slaString={slaString} />
-      {
-        aggregatedDiscountInfo ? 
+      <h2 className="pt-1 text-lg font-bold text-gray-700 break-normal"> {name} </h2>
+      <CardDescription avgRating={avgRating} />
+      <p className="text-[16px] inline-flex text-gray-500">{modifiedCuisnes}</p>
+     
+      {/* {
+        aggregatedDiscountInfoV3 ? 
         <div>
           <hr className="mt-4"/>
           <span className="flex pt-2 text-amber-900 hover:border-b-1">
             <TbDiscount2 />
-             <p className="text-xs pl-1 font-semibold">{aggregatedDiscountInfo?.shortDescriptionList[0]?.meta}</p>
+             <p className="text-xs pl-1 font-semibold">{aggregatedDiscountInfoV3?.header}</p>
           </span>
           <hr className="mt-2"/>
           <p className="text-center text-xs pt-3 text-blue-400 font-bold uppercase">Quick View</p>
         </div> : null
-      }
+      } */}
 
     </div>
   );

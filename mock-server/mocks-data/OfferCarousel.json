@@ -1,0 +1,204 @@
+{
+	"0": {
+		"card": {
+			"card": {
+				"@type": "type.googleapis.com/swiggy.gandalf.widgets.v2.GridWidget",
+				"header": {
+					"headerStyling": {
+						"padding": {
+							"left": 16,
+							"top": 14,
+							"bottom": 2
+						}
+					}
+				},
+				"layout": {
+					"rows": 1,
+					"columns": 3,
+					"horizontalScrollEnabled": true,
+					"shouldSnap": true,
+					"itemSpacing": 10,
+					"widgetPadding": {},
+					"containerStyle": {
+						"containerPadding": {
+							"left": 16,
+							"top": 12,
+							"right": 16,
+							"bottom": 12
+						}
+					},
+					"scrollBar": {
+						"scrollThumbColor": "#E46D47",
+						"scrollTrackColor": "#E4E4E4",
+						"width": 54,
+						"height": 4,
+						"scrollStyling": {
+							"padding": {
+								"top": 6,
+								"bottom": 12
+							}
+						}
+					},
+					"autoScrollConfig": {
+						"isScrollEnabled": true,
+						"autoScrollDuration": 4,
+						"autoScrollResetDuration": 4
+					},
+					"dotScrollBar": {
+						"activeColor": "#36393E",
+						"inactiveColor": "#66686E",
+						"activeSize": 16,
+						"inactiveMediumSize": 7,
+						"inactiveSmallSize": 4,
+						"dotSpacing": 8,
+						"windowSize": 5,
+						"showCount": true,
+						"textColor": "#FFFFFF",
+						"scrollStyling": {
+							"padding": {
+								"top": 6,
+								"bottom": 12
+							}
+						}
+					}
+				},
+				"imageGridCards": {
+					"info": [
+						{
+							"id": "1200052",
+							"imageId": "rng/md/carousel/production/3967580c0329555334072b18ba3c889c",
+							"action": {
+								"link": "https://www.swiggy.com/collections/92870?collection_id=92870&tags=layout_ux4&type=rcv2",
+								"text": "All new super",
+								"type": "WEBLINK"
+							},
+							"entityType": "BANNER",
+							"accessibility": {
+								"altText": "GET 50% OFF ON FIRST ORDER",
+								"altTextCta": "ORDER NOW"
+							},
+							"entityId": "92870",
+							"frequencyCapping": {}
+						},
+						{
+							"id": "1208457",
+							"imageId": "rng/md/carousel/production/90b990bd1dc16bba234f5002627f71d3",
+							"action": {
+								"link": "https://www.swiggy.com/menu/231204",
+								"text": "Burger King",
+								"type": "WEBLINK"
+							},
+							"entityType": "BANNER",
+							"accessibility": {
+								"altText": "Burger King",
+								"altTextCta": "Order Now"
+							},
+							"entityId": "231204",
+							"frequencyCapping": {},
+							"isManualAds": true
+						},
+						{
+							"id": "1208627",
+							"imageId": "rng/md/carousel/production/b5c836a219912a18dc490b6c3b89d99a",
+							"action": {
+								"link": "https://www.swiggy.com/menu/89361",
+								"text": "La pino",
+								"type": "WEBLINK"
+							},
+							"entityType": "BANNER",
+							"accessibility": {
+								"altText": "FLAT125",
+								"altTextCta": "Order Now"
+							},
+							"entityId": "89361",
+							"frequencyCapping": {},
+							"isManualAds": true
+						}
+					],
+					"style": {
+						"width": {
+							"type": "TYPE_RELATIVE",
+							"value": 0.95238,
+							"reference": "RELATIVE_DIMENSION_REFERENCE_CONTAINER_WIDTH"
+						},
+						"height": {
+							"type": "TYPE_RELATIVE",
+							"value": 0.59685,
+							"reference": "RELATIVE_DIMENSION_REFERENCE_WIDTH"
+						}
+					}
+				},
+				"id": "topical_banner",
+				"gridElements": {
+					"infoWithStyle": {
+						"@type": "type.googleapis.com/swiggy.gandalf.widgets.v2.ImageInfoLayoutCard",
+						"info": [
+							{
+								"id": "1200052",
+								"imageId": "rng/md/carousel/production/3967580c0329555334072b18ba3c889c",
+								"action": {
+									"link": "https://www.swiggy.com/collections/92870?collection_id=92870&tags=layout_ux4&type=rcv2",
+									"text": "All new super",
+									"type": "WEBLINK"
+								},
+								"entityType": "BANNER",
+								"accessibility": {
+									"altText": "GET 50% OFF ON FIRST ORDER",
+									"altTextCta": "ORDER NOW"
+								},
+								"entityId": "92870",
+								"frequencyCapping": {}
+							},
+							{
+								"id": "1208457",
+								"imageId": "rng/md/carousel/production/90b990bd1dc16bba234f5002627f71d3",
+								"action": {
+									"link": "https://www.swiggy.com/menu/231204",
+									"text": "Burger King",
+									"type": "WEBLINK"
+								},
+								"entityType": "BANNER",
+								"accessibility": {
+									"altText": "Burger King",
+									"altTextCta": "Order Now"
+								},
+								"entityId": "231204",
+								"frequencyCapping": {},
+								"isManualAds": true
+							},
+							{
+								"id": "1208627",
+								"imageId": "rng/md/carousel/production/b5c836a219912a18dc490b6c3b89d99a",
+								"action": {
+									"link": "https://www.swiggy.com/menu/89361",
+									"text": "La pino",
+									"type": "WEBLINK"
+								},
+								"entityType": "BANNER",
+								"accessibility": {
+									"altText": "FLAT125",
+									"altTextCta": "Order Now"
+								},
+								"entityId": "89361",
+								"frequencyCapping": {},
+								"isManualAds": true
+							}
+						],
+						"style": {
+							"width": {
+								"type": "TYPE_RELATIVE",
+								"value": 0.95238,
+								"reference": "RELATIVE_DIMENSION_REFERENCE_CONTAINER_WIDTH"
+							},
+							"height": {
+								"type": "TYPE_RELATIVE",
+								"value": 0.59685,
+								"reference": "RELATIVE_DIMENSION_REFERENCE_WIDTH"
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

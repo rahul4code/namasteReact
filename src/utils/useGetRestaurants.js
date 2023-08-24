@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import { setOffset } from "../slices/activeOffset";
+
 export const useGetRestaurants = (sortBy, offset, url) => {
   const dispatch = useDispatch();
   const [restaurants, setRestaurants] = useState([]);
@@ -29,9 +30,10 @@ export const useGetRestaurants = (sortBy, offset, url) => {
   const getData = async () => {
     const data = await fetch(url);
     const parsedData = await data.json();
+    console.log(sortBy, "PardeedData")
     if (!offset > 0) {
       if (sortBy === "RELEVANCE" && restaurants.length === 0) {
-        setRestaurants(parsedData?.data?.cards[2]?.data?.data?.cards);
+        setRestaurants(parsedData?.data?.cards[5]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
       } else {
         if (sortBy === "RELEVANCE" && restaurants.length > 0) {
           setRestaurants(parsedData?.data?.cards[2]?.data?.data?.cards);

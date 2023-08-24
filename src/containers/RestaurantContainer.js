@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import RestaurantCard from "../components/RestaurantCard/Card";
 import { useSearchParams } from "react-router-dom";
 import { Link } from "react-router-dom";
-import ContainerShimmer from "../components/Shimmer/ContainerShimmer";
 import { useGetRestaurants } from "../utils/useGetRestaurants";
 import { getRestaurantsURL } from "../utils/getRestaurantsURL";
 import { CardShimmer } from "../components/Shimmer/CardShimmer";
@@ -26,6 +25,8 @@ const RestaurantContainer = () => {
       dispatch(setOffset(offset + 16));
   }
 
+  // console.log(restaurants,"restaurants")
+
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
     return function () {
@@ -40,8 +41,8 @@ const RestaurantContainer = () => {
       <div className="pt-5 justify-evenly flex-wrap gap-y-12 grid md:grid-cols-4 gap-10 mx-5">
         {restaurants?.map((item, index) => {
           return !isLoading && item ? (
-            <Link to={`/restaurantdetails/${item?.data?.id}`} key={index}>
-              <RestaurantCard {...item?.data} />
+            <Link to={`/restaurantdetails/${item?.info?.id}`} key={item?.info?.id}>
+              <RestaurantCard {...item?.info} />
             </Link>
           ) : (
             <CardShimmer key={index} />

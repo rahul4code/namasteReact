@@ -9,6 +9,7 @@ const TabHeader = () => {
   const headerRef=useRef(null);
 
   useEffect(()=>{
+    console.log("calledddd")
     if(!searchParams?.get("SortBy")){
       setActivetab("RELEVANCE")
     }else{

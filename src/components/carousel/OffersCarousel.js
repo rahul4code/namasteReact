@@ -41,7 +41,7 @@ const OfferCarousel = ({ carousel }) => {
             ref={scrollContainerRef}
           >
             {carousel?.map((item) => (
-              <Card key={item?.data?.bannerId} {...item.data} />
+              <Card key={item?.id} creativeId={item.imageId} />
             ))}
           </div>
           <button
