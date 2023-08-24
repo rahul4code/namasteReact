@@ -2,16 +2,20 @@ import { useState, useEffect } from "react";
 import Shimmer from "./Shimmer/HomeShimmer";
 import OfferCarousel from "./Carousel/OffersCarousel";
 import RestaurantContainer from "../containers/RestaurantContainer";
-import { useGetRestaurants } from "../utils/useGetRestaurants";
+import { fetchRestaurantList } from "../slices/restaurantList";
+import { useDispatch } from "react-redux";
+import { useGetRestaurants } from "../slices/restaurantList";
 import { useSearchParams } from "react-router-dom";
 import { getRestaurantsURL } from "../utils/getRestaurantsURL";
 import TabHeader from "./Header/TabHeader";
 
 const Body = () => {
   const [carousel, setCarousel] = useState([]);
+  const dispatch=useDispatch()
 
   useEffect(() => {
     getData();
+    dispatch(fetchRestaurantList());
   }, []);
 
   async function getData() {
