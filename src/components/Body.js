@@ -24,10 +24,10 @@ const Body = () => {
 
   return (
     <>
-      <div data-testid="offerCarousel" className="bg-gray-900">
+      <div data-testid="offerCarousel" className={`${carousel?.length ===0 && "bg-gray-800"}`}>
         {<OfferCarousel carousel={carousel} />}
       </div>
-      <div className="mx-32">
+      <div className="mx-36">
         <RestaurantContainer />
       </div>
     </>

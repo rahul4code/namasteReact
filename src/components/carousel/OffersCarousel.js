@@ -28,10 +28,10 @@ const OfferCarousel = ({ carousel }) => {
 
   return (
     <>
-      {carousel?.length > 0 ? (
-        <div className="h-[340px] mx-[8rem] flex">
+      {carousel?.length > 0 ? (  
+        <div className="h-[340px] mx-[8rem] gap-2 flex">
           <button
-            className="bg-white h-12 w-12 rounded-full p-3 text-gray-700 z-10 place-self-center invisible"
+            className="bg-gray-200 text-xs rounded-full p-2 text-black z-10 place-self-center invisible"
             onClick={() => handleScroll("left")}
           >
             <AiOutlineArrowLeft className="text-2xl" />
@@ -45,7 +45,7 @@ const OfferCarousel = ({ carousel }) => {
             ))}
           </div>
           <button
-            className="bg-white h-12 w-12 rounded-full p-3 text-gray-700 z-10 place-self-center"
+            className="bg-gray-200 text-xs rounded-full p-2 text-black z-10 place-self-center"
             onClick={() => handleScroll("right")}
           >
             <AiOutlineArrowRight className="text-2xl" />
