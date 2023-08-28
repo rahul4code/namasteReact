@@ -15,14 +15,12 @@ const Body = () => {
 
   useEffect(() => {
     getData();
-    dispatch(fetchRestaurantList());
   }, []);
 
   async function getData() {
     const url = `https://www.swiggy.com/dapi/restaurants/list/v5?lat=26.8466937&lng=80.94616599999999&page_type=DESKTOP_WEB_LISTING`;
     const data = await fetch(url);
     const parsedData = await data.json();
-    console.log(parsedData?.data?.cards[0]?.card.card.imageGridCards.info,"ParsedData")
     setCarousel(parsedData?.data?.cards[0]?.card.card.imageGridCards.info);
   }
 

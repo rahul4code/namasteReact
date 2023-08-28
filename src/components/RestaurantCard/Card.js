@@ -1,5 +1,5 @@
 import CardDescription from "./CardDescription";
-import {TbDiscount2} from "react-icons/tb";
+import { TbDiscount2 } from "react-icons/tb";
 
 const RestaurantCard = ({
   name,
@@ -9,17 +9,21 @@ const RestaurantCard = ({
   slaString,
   cuisines,
   ribbon,
-  aggregatedDiscountInfoV3
+  aggregatedDiscountInfoV3,
 }) => {
   let modifiedCuisnes = cuisines?.join(", ");
   return (
     <div className="p-4 w-80 border-none duration-300 hover:scale-105">
-      {
-        aggregatedDiscountInfoV3 && <div className="absolute ml-[-10px] grid">
-        <span className="bg-gray-700 px-2 py-1 text-white font-semibold text-sm">{aggregatedDiscountInfoV3?.header +" "+ aggregatedDiscountInfoV3?.subHeader}</span>
-        <div className="h-0 w-0 ribbon-border"></div>
-      </div>
-      }
+      {aggregatedDiscountInfoV3?.hasOwnProperty("header") && (
+        <div className="absolute ml-[-10px] grid">
+          <span className="bg-gray-700 px-2 py-1 text-white font-semibold text-sm">
+            {aggregatedDiscountInfoV3?.header +
+              " " +
+              aggregatedDiscountInfoV3?.subHeader}
+          </span>
+          <div className="h-0 w-0 ribbon-border"></div>
+        </div>
+      )}
       <img
         src={
           "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/" +
@@ -29,10 +33,13 @@ const RestaurantCard = ({
         width="250px"
         className="rounded-lg"
       />
-      <h2 className="pt-1 text-lg font-bold text-gray-700 break-normal"> {name} </h2>
+      <h2 className="pt-1 text-lg font-bold text-gray-700 break-normal">
+        {" "}
+        {name}{" "}
+      </h2>
       <CardDescription avgRating={avgRating} />
       <p className="text-[16px] inline-flex text-gray-500">{modifiedCuisnes}</p>
-     
+
       {/* {
         aggregatedDiscountInfoV3 ? 
         <div>
@@ -45,7 +52,6 @@ const RestaurantCard = ({
           <p className="text-center text-xs pt-3 text-blue-400 font-bold uppercase">Quick View</p>
         </div> : null
       } */}
-
     </div>
   );
 };
