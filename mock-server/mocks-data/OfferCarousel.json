@@ -1,204 +1,119 @@
 {
-	"0": {
-		"card": {
-			"card": {
-				"@type": "type.googleapis.com/swiggy.gandalf.widgets.v2.GridWidget",
-				"header": {
-					"headerStyling": {
-						"padding": {
-							"left": 16,
-							"top": 14,
-							"bottom": 2
-						}
-					}
-				},
-				"layout": {
-					"rows": 1,
-					"columns": 3,
-					"horizontalScrollEnabled": true,
-					"shouldSnap": true,
-					"itemSpacing": 10,
-					"widgetPadding": {},
-					"containerStyle": {
-						"containerPadding": {
-							"left": 16,
-							"top": 12,
-							"right": 16,
-							"bottom": 12
-						}
-					},
-					"scrollBar": {
-						"scrollThumbColor": "#E46D47",
-						"scrollTrackColor": "#E4E4E4",
-						"width": 54,
-						"height": 4,
-						"scrollStyling": {
-							"padding": {
-								"top": 6,
-								"bottom": 12
-							}
-						}
-					},
-					"autoScrollConfig": {
-						"isScrollEnabled": true,
-						"autoScrollDuration": 4,
-						"autoScrollResetDuration": 4
-					},
-					"dotScrollBar": {
-						"activeColor": "#36393E",
-						"inactiveColor": "#66686E",
-						"activeSize": 16,
-						"inactiveMediumSize": 7,
-						"inactiveSmallSize": 4,
-						"dotSpacing": 8,
-						"windowSize": 5,
-						"showCount": true,
-						"textColor": "#FFFFFF",
-						"scrollStyling": {
-							"padding": {
-								"top": 6,
-								"bottom": 12
-							}
-						}
-					}
-				},
-				"imageGridCards": {
-					"info": [
-						{
-							"id": "1200052",
-							"imageId": "rng/md/carousel/production/3967580c0329555334072b18ba3c889c",
-							"action": {
-								"link": "https://www.swiggy.com/collections/92870?collection_id=92870&tags=layout_ux4&type=rcv2",
-								"text": "All new super",
-								"type": "WEBLINK"
-							},
-							"entityType": "BANNER",
-							"accessibility": {
-								"altText": "GET 50% OFF ON FIRST ORDER",
-								"altTextCta": "ORDER NOW"
-							},
-							"entityId": "92870",
-							"frequencyCapping": {}
-						},
-						{
-							"id": "1208457",
-							"imageId": "rng/md/carousel/production/90b990bd1dc16bba234f5002627f71d3",
-							"action": {
-								"link": "https://www.swiggy.com/menu/231204",
-								"text": "Burger King",
-								"type": "WEBLINK"
-							},
-							"entityType": "BANNER",
-							"accessibility": {
-								"altText": "Burger King",
-								"altTextCta": "Order Now"
-							},
-							"entityId": "231204",
-							"frequencyCapping": {},
-							"isManualAds": true
-						},
-						{
-							"id": "1208627",
-							"imageId": "rng/md/carousel/production/b5c836a219912a18dc490b6c3b89d99a",
-							"action": {
-								"link": "https://www.swiggy.com/menu/89361",
-								"text": "La pino",
-								"type": "WEBLINK"
-							},
-							"entityType": "BANNER",
-							"accessibility": {
-								"altText": "FLAT125",
-								"altTextCta": "Order Now"
-							},
-							"entityId": "89361",
-							"frequencyCapping": {},
-							"isManualAds": true
-						}
-					],
-					"style": {
-						"width": {
-							"type": "TYPE_RELATIVE",
-							"value": 0.95238,
-							"reference": "RELATIVE_DIMENSION_REFERENCE_CONTAINER_WIDTH"
-						},
-						"height": {
-							"type": "TYPE_RELATIVE",
-							"value": 0.59685,
-							"reference": "RELATIVE_DIMENSION_REFERENCE_WIDTH"
-						}
-					}
-				},
-				"id": "topical_banner",
-				"gridElements": {
-					"infoWithStyle": {
-						"@type": "type.googleapis.com/swiggy.gandalf.widgets.v2.ImageInfoLayoutCard",
-						"info": [
-							{
-								"id": "1200052",
-								"imageId": "rng/md/carousel/production/3967580c0329555334072b18ba3c889c",
-								"action": {
-									"link": "https://www.swiggy.com/collections/92870?collection_id=92870&tags=layout_ux4&type=rcv2",
-									"text": "All new super",
-									"type": "WEBLINK"
-								},
-								"entityType": "BANNER",
-								"accessibility": {
-									"altText": "GET 50% OFF ON FIRST ORDER",
-									"altTextCta": "ORDER NOW"
-								},
-								"entityId": "92870",
-								"frequencyCapping": {}
-							},
-							{
-								"id": "1208457",
-								"imageId": "rng/md/carousel/production/90b990bd1dc16bba234f5002627f71d3",
-								"action": {
-									"link": "https://www.swiggy.com/menu/231204",
-									"text": "Burger King",
-									"type": "WEBLINK"
-								},
-								"entityType": "BANNER",
-								"accessibility": {
-									"altText": "Burger King",
-									"altTextCta": "Order Now"
-								},
-								"entityId": "231204",
-								"frequencyCapping": {},
-								"isManualAds": true
-							},
-							{
-								"id": "1208627",
-								"imageId": "rng/md/carousel/production/b5c836a219912a18dc490b6c3b89d99a",
-								"action": {
-									"link": "https://www.swiggy.com/menu/89361",
-									"text": "La pino",
-									"type": "WEBLINK"
-								},
-								"entityType": "BANNER",
-								"accessibility": {
-									"altText": "FLAT125",
-									"altTextCta": "Order Now"
-								},
-								"entityId": "89361",
-								"frequencyCapping": {},
-								"isManualAds": true
-							}
-						],
-						"style": {
-							"width": {
-								"type": "TYPE_RELATIVE",
-								"value": 0.95238,
-								"reference": "RELATIVE_DIMENSION_REFERENCE_CONTAINER_WIDTH"
-							},
-							"height": {
-								"type": "TYPE_RELATIVE",
-								"value": 0.59685,
-								"reference": "RELATIVE_DIMENSION_REFERENCE_WIDTH"
-							}
-						}
-					}
-				}
-			}
-		}
-	}
+  "info": [
+    {
+      "id": "750580",
+      "imageId": "v1674029856/PC_Creative%20refresh/3D_bau/banners_new/Pizza.png",
+      "link": "https://www.swiggy.com/collections/83644?collection_id=83644&search_context=pizza&tags=layout_CCS_Pizza&type=rcv2"
+    },
+    {
+      "id": "762797",
+      "imageId": "v1674029845/PC_Creative%20refresh/3D_bau/banners_new/Burger.png",
+      "link": "https://www.swiggy.com/collections/83637?collection_id=83637&search_context=burger&tags=layout_CCS_Burger&type=rcv2"
+    },
+    {
+      "id": "750582",
+      "imageId": "v1675667625/PC_Creative%20refresh/North_Indian_4.png",
+      "link": "https://www.swiggy.com/collections/83645?collection_id=83645&search_context=northindian&tags=layout_CCS_NorthIndian&type=rcv2"
+    },
+    {
+      "id": "750592",
+      "imageId": "v1675667625/PC_Creative%20refresh/Biryani_2.png",
+
+      "link": "https://www.swiggy.com/collections/83649?collection_id=83649&search_context=biryani&tags=layout_CCS_Biryani&type=rcv2"
+    },
+    {
+      "id": "750223",
+      "imageId": "v1674029858/PC_Creative%20refresh/3D_bau/banners_new/Rolls.png",
+
+      "link": "https://www.swiggy.com/collections/83670?collection_id=83670&tags=layout_CCS_Rolls&type=rcv2"
+    },
+    {
+      "id": "750588",
+      "imageId": "v1674029848/PC_Creative%20refresh/3D_bau/banners_new/Chinese.png",
+
+      "link": "https://www.swiggy.com/collections/83647?collection_id=83647&tags=layout_CCS_Chinese&type=rcv2"
+    },
+    {
+      "id": "750132",
+      "imageId": "v1674029850/PC_Creative%20refresh/3D_bau/banners_new/Dosa.png",
+
+      "link": "https://www.swiggy.com/collections/80426?collection_id=80426&tags=layout_CCS_Dosa&type=rcv2"
+    },
+    {
+      "id": "750597",
+      "imageId": "v1674029851/PC_Creative%20refresh/3D_bau/banners_new/Ice_Creams.png",
+
+      "link": "https://www.swiggy.com/collections/83650?collection_id=83650&tags=layout_CCS_IceCreams&type=rcv2"
+    },
+    {
+      "id": "749774",
+      "imageId": "v1674029855/PC_Creative%20refresh/3D_bau/banners_new/Noodles.png",
+
+      "link": "https://www.swiggy.com/collections/80464?collection_id=80464&tags=layout_BAU_Contextual%2Cnoodles&type=rcv2"
+    },
+    {
+      "id": "750207",
+      "imageId": "v1674029854/PC_Creative%20refresh/3D_bau/banners_new/Pasta.png",
+      "link": "https://www.swiggy.com/collections/80480?collection_id=80480&tags=layout_BAU_Contextual%2Cpasta%2Cads_pc_pasta&type=rcv2"
+    },
+    {
+      "id": "749769",
+      "imageId": "v1674029852/PC_Creative%20refresh/3D_bau/banners_new/Momos.png",
+
+      "link": "https://www.swiggy.com/collections/80462?collection_id=80462&tags=layout_CCS_Momos&type=rcv2"
+    },
+    {
+      "id": "750572",
+      "imageId": "v1674029858/PC_Creative%20refresh/3D_bau/banners_new/Pure_Veg.png",
+
+      "link": "https://www.swiggy.com/collections/80439?collection_id=80439&tags=layout_CCS_PureVeg&type=rcv2"
+    },
+    {
+      "id": "749874",
+      "imageId": "v1674029845/PC_Creative%20refresh/3D_bau/banners_new/Cakes.png",
+
+      "link": "https://www.swiggy.com/collections/83656?collection_id=83656&tags=layout_CCS_Cake&type=rcv2"
+    },
+    {
+      "id": "750593",
+      "imageId": "v1674029850/PC_Creative%20refresh/3D_bau/banners_new/Gulab_Jamun.png",
+
+      "link": "https://www.swiggy.com/collections/80432?collection_id=80432&tags=layout_BAU_Contextual%2Cgulab_jamun&type=rcv2"
+    },
+    {
+      "id": "749879",
+      "imageId": "v1674029844/PC_Creative%20refresh/3D_bau/banners_new/Chole_Bature.png",
+
+      "link": "https://www.swiggy.com/collections/80383?collection_id=80383&tags=layout_CCS_CholeBhature&type=rcv2"
+    },
+    {
+      "id": "750203",
+      "imageId": "v1674029853/PC_Creative%20refresh/3D_bau/banners_new/Paratha.png",
+
+      "link": "https://www.swiggy.com/collections/80476?collection_id=80476&tags=layout_BAU_Contextual%2Cparatha%2Cads_pc_paratha&type=rcv2"
+    },
+    {
+      "id": "750217",
+      "imageId": "v1674029854/PC_Creative%20refresh/3D_bau/banners_new/Pav_Bhaji.png",
+
+      "link": "https://www.swiggy.com/collections/80364?collection_id=80364&tags=layout_PavBhaji_Contextual&type=rcv2"
+    },
+    {
+      "id": "750261",
+      "imageId": "v1674029860/PC_Creative%20refresh/3D_bau/banners_new/Rasmalai.png",
+
+      "link": "https://www.swiggy.com/collections/80391?collection_id=80391&tags=layout_BAU_Contextual%2Crasmalai&type=rcv2"
+    },
+    {
+      "id": "750209",
+      "imageId": "v1674029847/PC_Creative%20refresh/3D_bau/banners_new/Pastry.png",
+
+      "link": "https://www.swiggy.com/collections/80358?collection_id=80358&tags=layout_BAU_Contextual%2Clayout_ux4&type=rcv2"
+    },
+    {
+      "id": "750636",
+      "imageId": "v1674029853/PC_Creative%20refresh/3D_bau/banners_new/Kebabs.png",
+      "link": "https://www.swiggy.com/collections/80452?collection_id=80452&tags=layout_BAU_Contextual%2Ckebab%2Cads_pc_kebab&type=rcv2"
+    }
+  ]
 }

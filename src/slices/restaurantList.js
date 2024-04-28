@@ -26,6 +26,9 @@ const restaurantList=createSlice({
         },
         removeEmptyRestaurant:(state, action)=>{
             state.restaurantList=[...state.restaurantList.filter(item=>item)]
+        },
+        removeAllRestaurants:(state,action)=>{
+            state.restaurantList=[]
         }
     },
     // extraReducers:builder=>{
@@ -38,5 +41,5 @@ const restaurantList=createSlice({
     // }
 })
 
-export const {updateRestaurantList, setRestaurantList, addEmptyRestaurant, removeEmptyRestaurant} = restaurantList.actions
+export const {updateRestaurantList, setRestaurantList, addEmptyRestaurant, removeEmptyRestaurant, removeAllRestaurants} = restaurantList.actions
 export default restaurantList.reducer

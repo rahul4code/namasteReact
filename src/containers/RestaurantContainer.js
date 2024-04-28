@@ -20,17 +20,13 @@ const RestaurantContainer = () => {
   sortBy = sortBy ?? "RELEVANCE";
 
   const url = getRestaurantsURL(sortBy, offset);
-  console.log(url)
   useGetRestaurants(sortBy, offset, url);
-  // const isLoading = false;
   const restaurants = useSelector((store) => store.restaurants.restaurantList);
 
   function handleScroll() {
     window.innerHeight + window.scrollY >= document.body.offsetHeight - 200 &&
       dispatch(setOffset(offset + 16));
   }
-
-  // console.log(restaurants,"restaurants")
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
@@ -39,18 +35,20 @@ const RestaurantContainer = () => {
     };
   }, [offset]);
 
+  console.log("sortBY test", sortBy);
+
   return restaurants && restaurants.length > 0 ? (
     <>
       <TabHeader />
       <div className="border-[0.05px] border-gray-100 mx-10"></div>
       <div className="pt-5 justify-evenly flex-wrap gap-y-12 grid md:grid-cols-4 gap-10 mx-5">
         {restaurants?.map((item, index) => {
-          return  item ? (
+          return item ? (
             <Link
               to={`/restaurantdetails/${item?.info?.id}`}
               key={item?.info?.id}
             >
-              <RestaurantCard {...item?.info} />
+              <RestaurantCard {...item} />
             </Link>
           ) : (
             <CardShimmer key={index} />

@@ -1,57 +1,17 @@
 import CardDescription from "./CardDescription";
 import { TbDiscount2 } from "react-icons/tb";
+import { IMG_CDN_URL } from "../../constants";
 
-const RestaurantCard = ({
-  name,
-  avgRating,
-  cloudinaryImageId,
-  costForTwoString,
-  slaString,
-  cuisines,
-  ribbon,
-  aggregatedDiscountInfoV3,
-}) => {
-  let modifiedCuisnes = cuisines?.join(", ");
+const RestaurantCard = (props) => {
   return (
-    <div className="p-4 w-80 border-none duration-300 hover:scale-105">
-      {aggregatedDiscountInfoV3?.hasOwnProperty("header") && (
-        <div className="absolute ml-[-10px] grid">
-          <span className="bg-gray-700 px-2 py-1 text-white font-semibold text-sm">
-            {aggregatedDiscountInfoV3?.header +
-              " " +
-              aggregatedDiscountInfoV3?.subHeader}
-          </span>
-          <div className="h-0 w-0 ribbon-border"></div>
-        </div>
-      )}
+    <div className="p-4 gap-x-10 duration-300 hover:scale-105 cursor-pointer min-w-[280px]">
       <img
-        src={
-          "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/" +
-          `${cloudinaryImageId}`
-        }
+        className="rounded-lg h-[190px] min-w-[260px]"
+        src={IMG_CDN_URL + "/" + props?.cloudinaryImageId}
         alt="foodImg"
-        width="250px"
-        className="rounded-lg"
       />
-      <h2 className="pt-1 text-lg font-bold text-gray-700 break-normal">
-        {" "}
-        {name}{" "}
-      </h2>
-      <CardDescription avgRating={avgRating} />
-      <p className="text-[16px] inline-flex text-gray-500">{modifiedCuisnes}</p>
 
-      {/* {
-        aggregatedDiscountInfoV3 ? 
-        <div>
-          <hr className="mt-4"/>
-          <span className="flex pt-2 text-amber-900 hover:border-b-1">
-            <TbDiscount2 />
-             <p className="text-xs pl-1 font-semibold">{aggregatedDiscountInfoV3?.header}</p>
-          </span>
-          <hr className="mt-2"/>
-          <p className="text-center text-xs pt-3 text-blue-400 font-bold uppercase">Quick View</p>
-        </div> : null
-      } */}
+      <CardDescription {...props} />
     </div>
   );
 };

@@ -1,26 +1,25 @@
 import Card from "./Card";
 import { useRef } from "react";
 import { AiOutlineArrowLeft, AiOutlineArrowRight } from "react-icons/ai";
+import RestaurantCard from "../RestaurantCard/Card";
 
-const OfferCarousel = ({ carousel }) => {
+const OfferCarousel = ({ carousel, type }) => {
+  const isRestaurantTypes = type === "restaurantTypes";
   const scrollContainerRef = useRef(null);
 
   const handleScroll = (type) => {
-    console.log(scrollContainerRef, "scrollContainer");
     switch (type) {
       case "left":
-        scrollContainerRef.current.scrollLeft -= 1000;
-        setTimeout(() => {
-          scrollContainerRef.current.parentElement.firstChild.style.visibility =
-            "hidden";
-        }, 200);
-        scrollContainerRef.current.parentElement.firstChild.style.visibility =
-            "hidden";
+        scrollContainerRef.current.scrollTo({
+          left: scrollContainerRef.current.scrollLeft - 1000,
+          behavior: "smooth",
+        });
         break;
       case "right":
-        scrollContainerRef.current.scrollLeft += 1000;
-        scrollContainerRef.current.parentElement.firstChild.style.visibility =
-          "visible";
+        scrollContainerRef.current.scrollTo({
+          left: scrollContainerRef.current.scrollLeft + 1000,
+          behavior: "smooth",
+        });
       default:
         break;
     }
@@ -28,28 +27,43 @@ const OfferCarousel = ({ carousel }) => {
 
   return (
     <>
-      {carousel?.length > 0 ? (  
-        <div className="h-[340px] mx-[8rem] gap-2 flex">
-          <button
-            className="bg-gray-200 text-xs rounded-full p-2 text-black z-10 place-self-center invisible"
-            onClick={() => handleScroll("left")}
-          >
-            <AiOutlineArrowLeft className="text-2xl" />
-          </button>
+      {carousel?.length > 0 ? (
+        <div className="">
+          <div className="justify-between flex pt-5">
+            <b className="text-2xl">
+              &nbsp;
+              {isRestaurantTypes
+                ? "What's on your mind?"
+                : "Top restaurant chains in Kanpur"}
+            </b>
+            <div className="flex gap-2">
+              <button
+                className="bg-gray-200 text-xs rounded-full p-1 text-black"
+                onClick={() => handleScroll("left")}
+              >
+                <AiOutlineArrowLeft className="text-2xl" />
+              </button>
+              <button
+                className="bg-gray-200 text-xs rounded-full p-1 text-black"
+                onClick={() => handleScroll("right")}
+              >
+                <AiOutlineArrowRight className="text-2xl" />
+              </button>
+            </div>
+          </div>
+
           <div
-            className="flex w-[100%] overflow-y-hidden scroll-smooth hidden-scrollbar"
+            className="flex overflow-y-hidden scroll-smooth gap-x-3"
             ref={scrollContainerRef}
           >
-            {carousel?.map((item) => (
-              <Card key={item?.id} creativeId={item.imageId} />
-            ))}
+            {carousel?.map((item) =>
+              isRestaurantTypes ? (
+                <Card key={item?.id} creativeId={item.imageId} />
+              ) : (
+                <RestaurantCard key={item?.id} {...item} />
+              )
+            )}
           </div>
-          <button
-            className="bg-gray-200 text-xs rounded-full p-2 text-black z-10 place-self-center"
-            onClick={() => handleScroll("right")}
-          >
-            <AiOutlineArrowRight className="text-2xl" />
-          </button>
         </div>
       ) : (
         <div className="flex justify-center items-center flex-col h-[340px]">
