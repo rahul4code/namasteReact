@@ -5,8 +5,9 @@ const CardDescription = (props) => {
   let modifiedCuisines = props?.cuisines?.join(", ");
   return (
     <div className="relative bottom-9 left-2">
-      <p className="text-white font-extrabold text-xl">
-        ITEMS {props?.aggregatedDiscountInfoV3?.subHeader}
+      <p className="text-white font-extrabold text-xl h-7">
+        {props?.aggregatedDiscountInfoV3?.subHeader &&
+          "ITEMS " + props?.aggregatedDiscountInfoV3?.subHeader}
       </p>
       <h2 className="pt-4 text-lg font-bold text-gray-700 break-normal">
         {props?.name}

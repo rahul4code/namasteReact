@@ -11,6 +11,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { setOffset } from "../slices/activeOffset";
 import { useSelector } from "react-redux";
 import { fetchRestaurantList } from "../slices/restaurantList";
+import useSetRestaurants from "../utils/useSetRestaurants";
 
 const RestaurantContainer = () => {
   const dispatch = useDispatch();
@@ -18,36 +19,78 @@ const RestaurantContainer = () => {
   const [searchParams] = useSearchParams();
   let sortBy = searchParams.get("SortBy");
   sortBy = sortBy ?? "RELEVANCE";
-
-  const url = getRestaurantsURL(sortBy, offset);
-  useGetRestaurants(sortBy, offset, url);
-  const restaurants = useSelector((store) => store.restaurants.restaurantList);
+  const { restaurantList, setRestaurantList } = useSetRestaurants();
+  const [filteredList, setFilteredList] = useState([]);
+  const [filters, setFilters] = useState([]);
 
   function handleScroll() {
     window.innerHeight + window.scrollY >= document.body.offsetHeight - 200 &&
-      dispatch(setOffset(offset + 16));
+      setRestaurantList([...restaurantList, ...restaurantList]);
   }
 
   useEffect(() => {
+    setFilteredList(restaurantList);
     window.addEventListener("scroll", handleScroll);
     return function () {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, [offset]);
+  }, [restaurantList]);
 
-  console.log("sortBY test", sortBy);
+  console.log(filteredList, "filteredList");
 
-  return restaurants && restaurants.length > 0 ? (
+  function filterRestaurants(type) {
+    if (!filters.includes(type)) {
+      setFilters([...filters, type]);
+    }
+    switch (type) {
+      case "FastDelivery":
+        setFilteredList(() => {
+          return restaurantList.filter((item) =>
+            item?.slaString?.includes("25")
+          );
+        });
+        break;
+      case "NewOnSwiggy":
+        setFilteredList(() => {
+          return restaurantList.filter(
+            (item) => item?.areaName === "Hazratganj"
+          );
+        });
+        break;
+      case "4+Ratings":
+        setFilteredList(() => {
+          return restaurantList.filter((item) => item?.avgRatingString > 4);
+        });
+        break;
+      case "300-600":
+        setFilteredList(() => {
+          return restaurantList.filter(
+            (item) => !item?.aggregatedDiscountInfoV3.subHeader
+          );
+        });
+        break;
+      default:
+        break;
+    }
+  }
+
+  function resetFilters() {
+    setFilteredList(restaurantList);
+    setFilters([]);
+  }
+
+  return filteredList.length > 0 ? (
     <>
-      <TabHeader />
-      <div className="border-[0.05px] border-gray-100 mx-10"></div>
-      <div className="pt-5 justify-evenly flex-wrap gap-y-12 grid md:grid-cols-4 gap-10 mx-5">
-        {restaurants?.map((item, index) => {
+      <hr className="mx-44" />
+      <TabHeader
+        filterRestaurants={filterRestaurants}
+        filters={filters}
+        resetFilters={resetFilters}
+      />
+      <div className="justify-evenly flex-wrap grid md:grid-cols-4 gap-5 mx-44">
+        {filteredList?.map((item, index) => {
           return item ? (
-            <Link
-              to={`/restaurantdetails/${item?.info?.id}`}
-              key={item?.info?.id}
-            >
+            <Link to={`/restaurantdetails/${item?.id}`} key={item?.info?.id}>
               <RestaurantCard {...item} />
             </Link>
           ) : (

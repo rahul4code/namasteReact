@@ -39,21 +39,35 @@ const Body = () => {
   }
 
   return (
-    <div className="">
-      <div
-        data-testid="offerCarousel"
-        className={`${
-          restaurantTypes?.length === 0 && "bg-gray-800"
-        } mx-[12rem]`}
-      >
-        {<OfferCarousel carousel={restaurantTypes} type={"restaurantTypes"} />}
-        <hr className="m-9" />
-        {<OfferCarousel carousel={topRestaurants} type={"topRestaurants"} />}
+    <>
+      <div className={`${restaurantTypes?.length > 0 && "mx-44"}`}>
+        {restaurantTypes?.length > 0 ? (
+          <div data-testid="offerCarousel">
+            <OfferCarousel
+              carousel={restaurantTypes}
+              type={"restaurantTypes"}
+            />
+            <hr />
+            {
+              <OfferCarousel
+                carousel={topRestaurants}
+                type={"topRestaurants"}
+              />
+            }
+          </div>
+        ) : (
+          <div className="flex justify-center items-center flex-col h-[340px] bg-gray-800">
+            <div className="animate-spin rounded-full h-16 w-16 border-t-2 border-b-2 border-gray-300"></div>
+            <h2 className="text-gray-300 text-[1.7rem] mt-8 font-normal">
+              Looking for great food near you ...
+            </h2>
+          </div>
+        )}
       </div>
-      <div className="mx-36">
+      <div>
         <RestaurantContainer />
       </div>
-    </div>
+    </>
   );
 };
 
